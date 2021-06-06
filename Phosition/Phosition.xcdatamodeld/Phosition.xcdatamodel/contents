@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Achievement" representedClassName="Achievement" syncable="YES" codeGenerationType="category">
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="isUnlocked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Composition" representedClassName="Composition" syncable="YES" codeGenerationType="category">
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="header_img" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="subtitle" optional="YES" attributeType="String"/>
+        <attribute name="tips" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="instruction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Instruction" inverseName="composition" inverseEntity="Instruction"/>
+    </entity>
+    <entity name="Instruction" representedClassName="Instruction" syncable="YES" codeGenerationType="category">
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <relationship name="composition" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Composition" inverseName="instruction" inverseEntity="Composition"/>
+    </entity>
+    <elements>
+        <element name="Achievement" positionX="253.0762939453125" positionY="47.14739990234375" width="128" height="103"/>
+        <element name="Composition" positionX="-169.556396484375" positionY="133.4209899902344" width="128" height="134"/>
+        <element name="Instruction" positionX="71.11346435546875" positionY="167.4073486328125" width="128" height="74"/>
+    </elements>
 </model>
