@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,10 +14,10 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CompositionController" customModule="Phosition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Cream"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Phosition" id="TnI-sA-bgw"/>
                 </viewController>
@@ -30,16 +31,15 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ihr-BJ-4ZS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="YDd-4d-7JX">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" name="Cream"/>
-                        <color key="barTintColor" name="Blue"/>
-                        <color key="selectedImageTintColor" name="Cream"/>
+                        <color key="tintColor" red="0.99834603070000005" green="0.95098897419999995" blue="0.71283807180000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                        <color key="selectedImageTintColor" red="0.99834603070000005" green="0.95098897419999995" blue="0.71283807180000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="oLf-TC-Z2y" kind="relationship" relationship="viewControllers" id="hkk-d3-evE"/>
-                        <segue destination="byD-yG-2Eq" kind="relationship" relationship="viewControllers" id="QG4-mP-KO1"/>
+                        <segue destination="xeh-Vc-mOH" kind="relationship" relationship="viewControllers" id="Drv-1G-N21"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBB-jw-UKK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -50,21 +50,16 @@
         <scene sceneID="qI4-NY-gVj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oLf-TC-Z2y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Composition" image="Composition" id="BDE-Y8-BTy"/>
+                    <tabBarItem key="tabBarItem" title="Composition" image="camera.fill" catalog="system" id="BDE-Y8-BTy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BzI-aq-UGT">
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="Blue"/>
-                        <color key="tintColor" name="Cream"/>
-                        <color key="barTintColor" name="Blue"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="22"/>
-                            <color key="textColor" name="Cream"/>
-                        </textAttributes>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <color key="tintColor" red="0.99834603070000005" green="0.95098897419999995" blue="0.71283807180000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" name="AccentColor"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="34"/>
-                            <color key="textColor" name="Cream"/>
+                            <color key="textColor" red="0.99834603070000005" green="0.95098897419999995" blue="0.71283807180000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -76,24 +71,49 @@
             </objects>
             <point key="canvasLocation" x="949.23076923076917" y="93.838862559241704"/>
         </scene>
-        <!--Achievement-->
-        <scene sceneID="O2Y-8a-Aq9">
+        <!--View Controller-->
+        <scene sceneID="Sq5-IL-QpX">
             <objects>
-                <viewControllerPlaceholder storyboardName="Achievement" id="byD-yG-2Eq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="PxC-Lx-w5x"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HVV-Sw-OWY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="bwA-rC-FdK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fvz-ff-KIx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wz2-EH-dmP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gVu-fi-Kj5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifb-V1-Lv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="687"/>
+            <point key="canvasLocation" x="1878.4615384615383" y="775.59241706161129"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="7dd-pR-7Fc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xeh-Vc-mOH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Reg-gE-5Qn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVE-zo-QVC">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bwA-rC-FdK" kind="relationship" relationship="rootViewController" id="gMZ-vv-vGv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bjc-CY-oxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="837"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Composition" width="23" height="23"/>
-        <namedColor name="Blue">
-            <color red="0.11764705882352941" green="0.31372549019607843" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Cream">
-            <color red="0.93333333333333335" green="0.91764705882352937" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
