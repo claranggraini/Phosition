@@ -12,6 +12,9 @@ class CameraController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        //ini add 1 line
+        
         // Do any additional setup after loading the view.
     }
     
