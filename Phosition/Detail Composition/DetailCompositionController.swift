@@ -7,23 +7,38 @@
 
 import UIKit
 
-class DetailCompositionController: UIViewController {
-
+class DetailCompositionController: UIViewController, UITableViewDataSource {
+   
+    
+    @IBOutlet weak var detailCompositionTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        detailCompositionTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
-    // testing push 1
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch indexPath.section{
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionTableViewCell") as! DescriptionTableViewCell
+            
+            
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "instructionTableViewCell") as! InstructionTableViewCell
+            
+            
+            return cell
+        }
+    }
+
 
 }

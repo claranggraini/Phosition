@@ -28,6 +28,12 @@
 		78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A87266AAA2F00B9D92A /* Composition+CoreDataClass.swift */; };
 		78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */; };
 		78EA9A91266AAA2F00B9D92A /* Achievement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */; };
+		C7D1DA6F266E74C400ECC7E8 /* DetailComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA6E266E74C400ECC7E8 /* DetailComposition.swift */; };
+		C7D1DA73266E751600ECC7E8 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */; };
+		C7D1DA74266E751600ECC7E8 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D1DA72266E751600ECC7E8 /* DescriptionTableViewCell.xib */; };
+		C7D1DA77266E754600ECC7E8 /* InstructionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA75266E754600ECC7E8 /* InstructionTableViewCell.swift */; };
+		C7D1DA78266E754600ECC7E8 /* InstructionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D1DA76266E754600ECC7E8 /* InstructionTableViewCell.xib */; };
+		C7D1DA7A266EA0E200ECC7E8 /* DetailCompositionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA79266EA0E200ECC7E8 /* DetailCompositionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		78EA9A87266AAA2F00B9D92A /* Composition+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Composition+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instruction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C7D1DA6E266E74C400ECC7E8 /* DetailComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailComposition.swift; sourceTree = "<group>"; };
+		C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		C7D1DA72266E751600ECC7E8 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		C7D1DA75266E754600ECC7E8 /* InstructionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionTableViewCell.swift; sourceTree = "<group>"; };
+		C7D1DA76266E754600ECC7E8 /* InstructionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionTableViewCell.xib; sourceTree = "<group>"; };
+		C7D1DA79266EA0E200ECC7E8 /* DetailCompositionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCompositionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				780E317C266DEE4D005D56B5 /* Detail Composition.storyboard */,
+				C7D1DA6E266E74C400ECC7E8 /* DetailComposition.swift */,
+				C7D1DA79266EA0E200ECC7E8 /* DetailCompositionData.swift */,
 				780E317E266DEE78005D56B5 /* DetailCompositionController.swift */,
+				C74B76E0266F38CE004E8F5B /* UI */,
 			);
 			path = "Detail Composition";
 			sourceTree = "<group>";
@@ -176,6 +191,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C74B76E0266F38CE004E8F5B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */,
+				C7D1DA72266E751600ECC7E8 /* DescriptionTableViewCell.xib */,
+				C7D1DA75266E754600ECC7E8 /* InstructionTableViewCell.swift */,
+				C7D1DA76266E754600ECC7E8 /* InstructionTableViewCell.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,10 +261,12 @@
 			files = (
 				780E3186266DF4AD005D56B5 /* Congratulation.storyboard in Resources */,
 				78EA9A6F266A966C00B9D92A /* LaunchScreen.storyboard in Resources */,
+				C7D1DA78266E754600ECC7E8 /* InstructionTableViewCell.xib in Resources */,
 				780E3176266D60A3005D56B5 /* Camera.storyboard in Resources */,
 				78EA9A6C266A966C00B9D92A /* Assets.xcassets in Resources */,
 				780E317D266DEE4D005D56B5 /* Detail Composition.storyboard in Resources */,
 				780E3174266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf in Resources */,
+				C7D1DA74266E751600ECC7E8 /* DescriptionTableViewCell.xib in Resources */,
 				780E3181266DF414005D56B5 /* Phosition.sqlite in Resources */,
 				78EA9A80266AA36B00B9D92A /* Achievement.storyboard in Resources */,
 				78EA9A67266A966B00B9D92A /* Main.storyboard in Resources */,
@@ -252,17 +280,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D1DA6F266E74C400ECC7E8 /* DetailComposition.swift in Sources */,
 				78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */,
 				78EA9A64266A966B00B9D92A /* CompositionController.swift in Sources */,
 				78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */,
 				780E3184266DF485005D56B5 /* CongratulationController.swift in Sources */,
 				78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */,
+				C7D1DA77266E754600ECC7E8 /* InstructionTableViewCell.swift in Sources */,
+				C7D1DA7A266EA0E200ECC7E8 /* DetailCompositionData.swift in Sources */,
 				780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */,
 				78EA9A78266AA0C000B9D92A /* AchievementController.swift in Sources */,
 				780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */,
 				78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */,
 				78E42046266CD73F00CB943C /* Database.swift in Sources */,
 				78EA9A6A266A966B00B9D92A /* Phosition.xcdatamodeld in Sources */,
+				C7D1DA73266E751600ECC7E8 /* DescriptionTableViewCell.swift in Sources */,
 				78EA9A91266AAA2F00B9D92A /* Achievement+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
