@@ -8,7 +8,11 @@
 import UIKit
 
 class AchievementController: UIViewController {
-
+   
+    @IBOutlet var achievementView: AchievementView!
+    
+    let achievements = Database.shared.getAchievements()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) {
@@ -20,11 +24,11 @@ class AchievementController: UIViewController {
             navBarAppearance.backgroundColor = UIColor(named: "Blue")
             self.navigationController!.navigationBar.standardAppearance = navBarAppearance
             self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
-//            let attributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 17)!]
-//            UINavigationBar.appearance().titleTextAttributes = attributes
+            achievementView.setup()
+            achievementView.achievementCV.delegate = self
+            achievementView.achievementCV.dataSource = self
         }
+          
     }
-
-
    
 }
