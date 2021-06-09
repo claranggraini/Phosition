@@ -13,5 +13,6 @@ class AchievementCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        achievementIV.layer.cornerRadius = 10
     }
 }

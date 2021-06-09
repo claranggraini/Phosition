@@ -50,7 +50,7 @@
         <scene sceneID="qI4-NY-gVj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oLf-TC-Z2y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Composition" image="Composition" id="BDE-Y8-BTy"/>
+                    <tabBarItem key="tabBarItem" title="Composition" image="Composition 25x25" id="BDE-Y8-BTy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BzI-aq-UGT">
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>
@@ -88,7 +88,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Composition" width="23" height="23"/>
+        <image name="Composition 25x25" width="25" height="25"/>
         <namedColor name="Blue">
             <color red="0.11800000071525574" green="0.31400001049041748" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
