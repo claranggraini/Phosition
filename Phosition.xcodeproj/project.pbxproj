@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E3168266D3BCC005D56B5 /* CameraController.swift */; };
-		780E3171266D468D005D56B5 /* Phosition.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 780E3170266D468D005D56B5 /* Phosition.sqlite */; };
 		780E3174266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 780E3173266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf */; };
 		780E3176266D60A3005D56B5 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780E3175266D60A3005D56B5 /* Camera.storyboard */; };
+		780E317D266DEE4D005D56B5 /* Detail Composition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780E317C266DEE4D005D56B5 /* Detail Composition.storyboard */; };
+		780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E317E266DEE78005D56B5 /* DetailCompositionController.swift */; };
+		780E3181266DF414005D56B5 /* Phosition.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 780E3180266DF414005D56B5 /* Phosition.sqlite */; };
+		780E3184266DF485005D56B5 /* CongratulationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E3183266DF485005D56B5 /* CongratulationController.swift */; };
+		780E3186266DF4AD005D56B5 /* Congratulation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780E3185266DF4AD005D56B5 /* Congratulation.storyboard */; };
 		78E42046266CD73F00CB943C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E42045266CD73F00CB943C /* Database.swift */; };
 		78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A5F266A966B00B9D92A /* AppDelegate.swift */; };
 		78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A61266A966B00B9D92A /* SceneDelegate.swift */; };
@@ -28,9 +32,13 @@
 
 /* Begin PBXFileReference section */
 		780E3168266D3BCC005D56B5 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
-		780E3170266D468D005D56B5 /* Phosition.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phosition.sqlite; sourceTree = "<group>"; };
 		780E3173266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		780E3175266D60A3005D56B5 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		780E317C266DEE4D005D56B5 /* Detail Composition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Detail Composition.storyboard"; sourceTree = "<group>"; };
+		780E317E266DEE78005D56B5 /* DetailCompositionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCompositionController.swift; sourceTree = "<group>"; };
+		780E3180266DF414005D56B5 /* Phosition.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phosition.sqlite; sourceTree = "<group>"; };
+		780E3183266DF485005D56B5 /* CongratulationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationController.swift; sourceTree = "<group>"; };
+		780E3185266DF4AD005D56B5 /* Congratulation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Congratulation.storyboard; sourceTree = "<group>"; };
 		78E42045266CD73F00CB943C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		78EA9A5C266A966B00B9D92A /* Phosition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phosition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EA9A5F266A966B00B9D92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +70,7 @@
 		780E3166266D3AA1005D56B5 /* PreloadData */ = {
 			isa = PBXGroup;
 			children = (
-				780E3170266D468D005D56B5 /* Phosition.sqlite */,
+				780E3180266DF414005D56B5 /* Phosition.sqlite */,
 			);
 			path = PreloadData;
 			sourceTree = "<group>";
@@ -92,6 +100,24 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		780E317B266DEE1C005D56B5 /* Detail Composition */ = {
+			isa = PBXGroup;
+			children = (
+				780E317C266DEE4D005D56B5 /* Detail Composition.storyboard */,
+				780E317E266DEE78005D56B5 /* DetailCompositionController.swift */,
+			);
+			path = "Detail Composition";
+			sourceTree = "<group>";
+		};
+		780E3182266DF46A005D56B5 /* Congratulation */ = {
+			isa = PBXGroup;
+			children = (
+				780E3183266DF485005D56B5 /* CongratulationController.swift */,
+				780E3185266DF4AD005D56B5 /* Congratulation.storyboard */,
+			);
+			path = Congratulation;
+			sourceTree = "<group>";
+		};
 		78EA9A53266A966B00B9D92A = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +137,8 @@
 		78EA9A5E266A966B00B9D92A /* Phosition */ = {
 			isa = PBXGroup;
 			children = (
+				780E3182266DF46A005D56B5 /* Congratulation */,
+				780E317B266DEE1C005D56B5 /* Detail Composition */,
 				780E3172266D55C1005D56B5 /* Fonts */,
 				78EA9A84266AA49300B9D92A /* Achievement */,
 				780E3167266D3BB3005D56B5 /* Camera */,
@@ -205,13 +233,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780E3186266DF4AD005D56B5 /* Congratulation.storyboard in Resources */,
 				78EA9A6F266A966C00B9D92A /* LaunchScreen.storyboard in Resources */,
 				780E3176266D60A3005D56B5 /* Camera.storyboard in Resources */,
 				78EA9A6C266A966C00B9D92A /* Assets.xcassets in Resources */,
+				780E317D266DEE4D005D56B5 /* Detail Composition.storyboard in Resources */,
 				780E3174266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf in Resources */,
+				780E3181266DF414005D56B5 /* Phosition.sqlite in Resources */,
 				78EA9A80266AA36B00B9D92A /* Achievement.storyboard in Resources */,
 				78EA9A67266A966B00B9D92A /* Main.storyboard in Resources */,
-				780E3171266D468D005D56B5 /* Phosition.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,9 +255,11 @@
 				78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */,
 				78EA9A64266A966B00B9D92A /* CompositionController.swift in Sources */,
 				78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */,
+				780E3184266DF485005D56B5 /* CongratulationController.swift in Sources */,
 				78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */,
 				780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */,
 				78EA9A78266AA0C000B9D92A /* AchievementController.swift in Sources */,
+				780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */,
 				78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */,
 				78E42046266CD73F00CB943C /* Database.swift in Sources */,
 				78EA9A6A266A966B00B9D92A /* Phosition.xcdatamodeld in Sources */,
