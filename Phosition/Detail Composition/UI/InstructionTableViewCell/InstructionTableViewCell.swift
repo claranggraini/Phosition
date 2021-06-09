@@ -13,15 +13,15 @@ class InstructionTableViewCell: UITableViewCell {
     @IBOutlet weak var instructionNumberLabel: UILabel!
     @IBOutlet weak var instructionDescriptionLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+//    var compositionInstruction: CompositionInstruction? {
+//        didSet{
+//            setupView()
+//        }
+//    }
+//
+//    private func setupView() {
+//        instructionNumberLabel.text = compositionInstruction?.instructionNo
+//        instructionDescriptionLabel.text = compositionInstruction?.instructionDescription
+//    }
+//
 }

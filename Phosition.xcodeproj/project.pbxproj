@@ -194,12 +194,28 @@
 		C74B76E0266F38CE004E8F5B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C7CAF813266FC8C900CF64D3 /* DescriptionTableViewCell */,
+				C7CAF814266FC8DA00CF64D3 /* InstructionTableViewCell */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C7CAF813266FC8C900CF64D3 /* DescriptionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
 				C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */,
 				C7D1DA72266E751600ECC7E8 /* DescriptionTableViewCell.xib */,
+			);
+			path = DescriptionTableViewCell;
+			sourceTree = "<group>";
+		};
+		C7CAF814266FC8DA00CF64D3 /* InstructionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
 				C7D1DA75266E754600ECC7E8 /* InstructionTableViewCell.swift */,
 				C7D1DA76266E754600ECC7E8 /* InstructionTableViewCell.xib */,
 			);
-			path = UI;
+			path = InstructionTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

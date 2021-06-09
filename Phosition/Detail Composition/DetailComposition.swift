@@ -18,7 +18,7 @@ enum CompositionType: String, CaseIterable {
     func getImage() -> UIImage {
         switch self {
         case .ruleOfThird:
-            return #imageLiteral(resourceName: "ROT")
+            return #imageLiteral(resourceName: "header-ROT") 
         case .leadingLine:
             return #imageLiteral(resourceName: "LL")
         case .ruleOfSpace:
@@ -29,27 +29,49 @@ enum CompositionType: String, CaseIterable {
     }
 }
 
-class DetailComposition {
+enum InstructionNo: String, CaseIterable {
+    case step1 = "Step 1"
+    case step2 = "Step 2"
+    case step3 = "Step 3"
+    case step4 = "Step 4"
     
-    var name: String?
-    var description: String?
-    
-    init(name: String?,description: String?){
-        self.name = name
-        self.description = description
+    func getROTimage() -> UIImage{
+        switch self {
+        case .step1:
+            return #imageLiteral(resourceName: "ROT-1")
+        case .step2:
+            return #imageLiteral(resourceName: "ROT-2")
+        case .step3:
+            return #imageLiteral(resourceName: "ROT-4")
+        default:
+            return #imageLiteral(resourceName: "ROT-4")
+        }
     }
 }
 
-class CompositionInstruction {
-    var number: Int?
-    var description: String?
+class DetailComposition {
     
-    init(number: Int?, description: String?){
-        self.number = number
-        self.description = description
+    var compositionName: CompositionType?
+    var compositionDescription: String?
+    
+    init(compositionName: CompositionType,compositionDescription: String?){
+        self.compositionName = compositionName
+        self.compositionDescription = compositionDescription
     }
     
 }
+
+class CompositionInstruction {
+    var instructionNo: InstructionNo?
+    var instructionDescription: String?
+    
+    init(instructionNo: InstructionNo, instructionDescription: String?){
+        self.instructionNo = instructionNo
+        self.instructionDescription = instructionDescription
+    }
+    
+}
+
 
 
 
