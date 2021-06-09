@@ -28,6 +28,8 @@
 		78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A87266AAA2F00B9D92A /* Composition+CoreDataClass.swift */; };
 		78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */; };
 		78EA9A91266AAA2F00B9D92A /* Achievement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */; };
+		84D3AD9B2670644900E141EC /* VisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3AD9A2670644900E141EC /* VisionController.swift */; };
+		84D3AD9D2670647600E141EC /* YOLOv3.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 84D3AD9C2670647600E141EC /* YOLOv3.mlkitmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		78EA9A87266AAA2F00B9D92A /* Composition+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Composition+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instruction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84D3AD9A2670644900E141EC /* VisionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionController.swift; sourceTree = "<group>"; };
+		84D3AD9C2670647600E141EC /* YOLOv3.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = YOLOv3.mlkitmodel; path = ../../../../YOLOv3.mlkitmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 			children = (
 				780E3175266D60A3005D56B5 /* Camera.storyboard */,
 				780E3168266D3BCC005D56B5 /* CameraController.swift */,
+				84D3AD9A2670644900E141EC /* VisionController.swift */,
+				84D3AD9C2670647600E141EC /* YOLOv3.mlkitmodel */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 				780E3184266DF485005D56B5 /* CongratulationController.swift in Sources */,
 				78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */,
 				780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */,
+				84D3AD9B2670644900E141EC /* VisionController.swift in Sources */,
+				84D3AD9D2670647600E141EC /* YOLOv3.mlkitmodel in Sources */,
 				78EA9A78266AA0C000B9D92A /* AchievementController.swift in Sources */,
 				780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */,
 				78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */,
@@ -411,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BJK86B698;
+				DEVELOPMENT_TEAM = H9X3B7ZFUK;
 				INFOPLIST_FILE = Phosition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -430,7 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BJK86B698;
+				DEVELOPMENT_TEAM = H9X3B7ZFUK;
 				INFOPLIST_FILE = Phosition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
