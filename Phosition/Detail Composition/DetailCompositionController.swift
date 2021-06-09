@@ -8,11 +8,15 @@
 import UIKit
 
 class DetailCompositionController: UIViewController, UITableViewDataSource {
-   
+    
     
     @IBOutlet weak var detailCompositionTableView: UITableView!
-    @IBOutlet weak var practiceButton: UIButton!
+
     
+    let compositions = Database.shared.getCompositions()
+    
+    
+    // MARK: -Dummy Data
     var selectedRule = [
         DetailComposition(compositionName: .ruleOfThird, compositionDescription: "The rule of thirds is an essential photography technique. It can be applied to any subject to improve the composition and balance of your images.   The rule of thirds is a compositional guideline that breaks an image down into thirds (both horizontally and vertically) so you have nine pieces and four gridlines.   The rule of thirds also identifies four power points at the center of each gridline intersection.")
     ]
@@ -24,6 +28,8 @@ class DetailCompositionController: UIViewController, UITableViewDataSource {
         CompositionInstruction(instructionNo: .step4, instructionDescription: "Adjust the horizontal view lower or higher if needed, so the object will be on a third higher or a third lower in the camera view.")
     ]
     
+    //MARK: -ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,21 +37,26 @@ class DetailCompositionController: UIViewController, UITableViewDataSource {
         detailCompositionTableView.register(MyCell.self, forCellReuseIdentifier: "MyCell")
         getDesc()
         getCompoInstruct()
+        getData()
+        
     }
     
-    
     func getDesc() {
-
         let nib = UINib(nibName: "\(DescriptionTableViewCell.self)", bundle: nil)
         detailCompositionTableView.register(nib, forCellReuseIdentifier: "descriptionTableViewCell")
     }
-        
+    
     
     func getCompoInstruct (){
         let nib = UINib(nibName: "\(InstructionTableViewCell.self)", bundle: nil)
         detailCompositionTableView.register(nib, forCellReuseIdentifier: "instructionTableViewCell")
     }
     
+    
+    func getData(){
+        //        let data = Database().getCompositions()
+        print("Test Get Data")
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -71,6 +82,7 @@ class DetailCompositionController: UIViewController, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
             cell.descriptionImage.image = selectedRule[indexPath.row].compositionName?.getImage()
             cell.descriptionTextLabel.text = selectedRule[indexPath.row].compositionDescription
+            print("Testing")
             return cell
         case 1:
             //INSTRUCTION
@@ -81,20 +93,20 @@ class DetailCompositionController: UIViewController, UITableViewDataSource {
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! MyCell
-                    cell.label.text = ""
-                    cell.buttonTapCallback = {
-                        cell.label.text = "Practice"
-                    }
-                    return cell
+            cell.label.text = ""
+            cell.buttonTapCallback = {
+                cell.label.text = "Practice"
+            }
+            return cell
+            
         }
         
     }
-
-
     
 }
 
 
+// MARK: -Button
 class MyCell: UITableViewCell {
     
     var buttonTapCallback: () -> ()  = { }
@@ -102,20 +114,23 @@ class MyCell: UITableViewCell {
     let button: UIButton = {
         let btn = UIButton()
         btn.setTitle("Practice", for: .normal)
-        btn.backgroundColor = UIColor.blue
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.backgroundColor = #colorLiteral(red: 0.1160918847, green: 0.3141029179, blue: 0.578050971, alpha: 1)
+     
+        btn.layer.cornerRadius = 4
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         return btn
     }()
     
     let label: UILabel = {
-       let lbl = UILabel()
+        let lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textColor = .systemPink
-       return lbl
+        return lbl
     }()
     
     @objc func didTapButton() {
         buttonTapCallback()
+        print("Button is Clicked")
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -129,16 +144,17 @@ class MyCell: UITableViewCell {
         button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
         button.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
-        button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20).isActive = true
+        button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 10).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         //Add label
         contentView.addSubview(label)
         //Set constraints as per your requirements
         label.translatesAutoresizingMaskIntoConstraints = false
         label.leadingAnchor.constraint(equalTo: button.trailingAnchor, constant: 20).isActive = true
-        label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
-        label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
-        label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
+        label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20).isActive = true
+        label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
+        label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 20).isActive = true
     }
     
     required init?(coder: NSCoder) {
@@ -146,3 +162,13 @@ class MyCell: UITableViewCell {
     }
     
 }
+
+// MARK: -Extentions
+extension DetailCompositionController {
+    
+    //    func loadCompositionData(){
+    //        Database().getInstructions(from: [Composition])
+    //    }
+    
+}
+

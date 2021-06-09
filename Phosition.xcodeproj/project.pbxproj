@@ -28,6 +28,7 @@
 		78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A87266AAA2F00B9D92A /* Composition+CoreDataClass.swift */; };
 		78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */; };
 		78EA9A91266AAA2F00B9D92A /* Achievement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */; };
+		C7BEFF762671255600344E6C /* DetailCompositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEFF752671255600344E6C /* DetailCompositionView.swift */; };
 		C7D1DA6F266E74C400ECC7E8 /* DetailComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA6E266E74C400ECC7E8 /* DetailComposition.swift */; };
 		C7D1DA73266E751600ECC7E8 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */; };
 		C7D1DA74266E751600ECC7E8 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D1DA72266E751600ECC7E8 /* DescriptionTableViewCell.xib */; };
@@ -60,6 +61,7 @@
 		78EA9A87266AAA2F00B9D92A /* Composition+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Composition+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instruction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C7BEFF752671255600344E6C /* DetailCompositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCompositionView.swift; sourceTree = "<group>"; };
 		C7D1DA6E266E74C400ECC7E8 /* DetailComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailComposition.swift; sourceTree = "<group>"; };
 		C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		C7D1DA72266E751600ECC7E8 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C7D1DA6E266E74C400ECC7E8 /* DetailComposition.swift */,
 				C7D1DA79266EA0E200ECC7E8 /* DetailCompositionData.swift */,
 				780E317E266DEE78005D56B5 /* DetailCompositionController.swift */,
+				C7BEFF752671255600344E6C /* DetailCompositionView.swift */,
 				C74B76E0266F38CE004E8F5B /* UI */,
 			);
 			path = "Detail Composition";
@@ -302,6 +305,7 @@
 				78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */,
 				780E3184266DF485005D56B5 /* CongratulationController.swift in Sources */,
 				78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */,
+				C7BEFF762671255600344E6C /* DetailCompositionView.swift in Sources */,
 				C7D1DA77266E754600ECC7E8 /* InstructionTableViewCell.swift in Sources */,
 				C7D1DA7A266EA0E200ECC7E8 /* DetailCompositionData.swift in Sources */,
 				780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */,
