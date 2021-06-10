@@ -13,8 +13,12 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
 
     var bufferSize: CGSize = .zero
     var rootLayer: CALayer! = nil
+    var takePicture = false
     
+    @IBOutlet weak public var imageVieww: UIImageView!
+    @IBOutlet weak private var gridView: UIView!
     @IBOutlet weak private var previewView: UIView!
+    @IBOutlet weak private var photoButton: UIButton!
     private let session = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
     private let videoDataOutput = AVCaptureVideoDataOutput()
@@ -27,7 +31,16 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        photoButton.backgroundColor = .white
+        photoButton.tintColor = .white
+        photoButton.layer.cornerRadius = 50
         setupAVCapture()
+    }
+    
+    @IBAction func onTapTakePhoto(_ sender: Any){
+        print("tapped button")
+        takePicture = true
+        photoButton.backgroundColor = .secondaryLabel
     }
     
     override func didReceiveMemoryWarning() {
@@ -107,12 +120,12 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         let exifOrientation: CGImagePropertyOrientation
         
         switch curDeviceOrientation {
-        case UIDeviceOrientation.portraitUpsideDown:  // Device oriented vertically, home button on the top
-            exifOrientation = .left
-        case UIDeviceOrientation.landscapeLeft:       // Device oriented horizontally, home button on the right
-            exifOrientation = .upMirrored
-        case UIDeviceOrientation.landscapeRight:      // Device oriented horizontally, home button on the left
-            exifOrientation = .down
+//        case UIDeviceOrientation.portraitUpsideDown:  // Device oriented vertically, home button on the top
+//            exifOrientation = .left
+//        case UIDeviceOrientation.landscapeLeft:       // Device oriented horizontally, home button on the right
+//            exifOrientation = .upMirrored
+//        case UIDeviceOrientation.landscapeRight:      // Device oriented horizontally, home button on the left
+//            exifOrientation = .down
         case UIDeviceOrientation.portrait:            // Device oriented vertically, home button on the bottom
             exifOrientation = .up
         default:

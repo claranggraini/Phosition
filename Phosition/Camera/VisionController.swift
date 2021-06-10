@@ -16,12 +16,14 @@ class VisionController: CameraController {
     // Vision parts
     private var requests = [VNRequest]()
     
+    private var found = false
+    
     @discardableResult
     func setupVision() -> NSError? {
         // Setup Vision parts
         let error: NSError! = nil
         
-        guard let modelURL = Bundle.main.url(forResource: "YOLOv3", withExtension: "mlmodelc") else {
+        guard let modelURL = Bundle.main.url(forResource: "YOLOv3Tiny", withExtension: "mlmodelc") else {
             return NSError(domain: "VisionController", code: -1, userInfo: [NSLocalizedDescriptionKey: "Model file is missing"])
         }
         do {
@@ -45,22 +47,26 @@ class VisionController: CameraController {
     func drawVisionRequestResults(_ results: [Any]) {
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
+        found = false
         detectionOverlay.sublayers = nil // remove all the old recognized objects
         for observation in results where observation is VNRecognizedObjectObservation {
-            guard let objectObservation = observation as? VNRecognizedObjectObservation else {
-                continue
+            if found == false {
+                guard let objectObservation = observation as? VNRecognizedObjectObservation else {
+                    continue
+                }
+                // Select only the label with the highest confidence.
+                let topLabelObservation = objectObservation.labels[0]
+                let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
+                
+                let shapeLayer = self.createRoundedRectLayerWithBounds(objectBounds)
+                
+                let textLayer = self.createTextSubLayerInBounds(objectBounds,
+                                                                identifier: topLabelObservation.identifier,
+                                                                confidence: topLabelObservation.confidence)
+                shapeLayer.addSublayer(textLayer)
+                detectionOverlay.addSublayer(shapeLayer)
+                found = true
             }
-            // Select only the label with the highest confidence.
-            let topLabelObservation = objectObservation.labels[0]
-            let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
-            
-            let shapeLayer = self.createRoundedRectLayerWithBounds(objectBounds)
-            
-            let textLayer = self.createTextSubLayerInBounds(objectBounds,
-                                                            identifier: topLabelObservation.identifier,
-                                                            confidence: topLabelObservation.confidence)
-            shapeLayer.addSublayer(textLayer)
-            detectionOverlay.addSublayer(shapeLayer)
         }
         self.updateLayerGeometry()
         CATransaction.commit()
@@ -79,15 +85,42 @@ class VisionController: CameraController {
         } catch {
             print(error)
         }
+        
+        if !takePicture {
+            return //we have nothing to do with the image buffer
+        }
+        
+        //get a CIImage out of the CVImageBuffer
+        let ciImage = CIImage(cvImageBuffer: pixelBuffer)
+        guard let cgImage = cgImage(from: ciImage) else { return }
+        //get UIImage out of CIImage
+        let uiImage = UIImage(cgImage: cgImage)
+        
+        DispatchQueue.main.async {
+            self.imageVieww.image = uiImage
+        }
+        
+        UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
+        
+        print("ada foto")
+        
+        takePicture = false
+    }
+    
+    func cgImage(from ciImage: CIImage) -> CGImage? {
+        let context = CIContext(options: nil)
+        return context.createCGImage(ciImage, from: ciImage.extent)
     }
     
     override func setupAVCapture() {
         super.setupAVCapture()
         
         // setup Vision parts
-        setupLayers()
-        updateLayerGeometry()
-        setupVision()
+//        DispatchQueue.global(qos: .userInitiated).async {
+            self.setupLayers()
+            self.updateLayerGeometry()
+            self.setupVision()
+//        }
         
         // start the capture
         startCaptureSession()
