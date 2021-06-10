@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18ECD0F32672351800E57C63 /* CompositionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECD0F22672351800E57C63 /* CompositionCollectionViewCell.swift */; };
 		780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E3168266D3BCC005D56B5 /* CameraController.swift */; };
 		780E3174266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 780E3173266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf */; };
 		780E3176266D60A3005D56B5 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780E3175266D60A3005D56B5 /* Camera.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18ECD0F22672351800E57C63 /* CompositionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionCollectionViewCell.swift; sourceTree = "<group>"; };
 		780E3168266D3BCC005D56B5 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		780E3173266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		780E3175266D60A3005D56B5 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				78EA9A5F266A966B00B9D92A /* AppDelegate.swift */,
 				78EA9A61266A966B00B9D92A /* SceneDelegate.swift */,
 				78EA9A65266A966B00B9D92A /* Main.storyboard */,
+				18ECD0F22672351800E57C63 /* CompositionCollectionViewCell.swift */,
 				78EA9A6B266A966C00B9D92A /* Assets.xcassets */,
 				78EA9A6D266A966C00B9D92A /* LaunchScreen.storyboard */,
 				78EA9A70266A966C00B9D92A /* Info.plist */,
@@ -296,6 +299,7 @@
 				780E3191266FC2A1005D56B5 /* AchievementView.swift in Sources */,
 				78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */,
 				780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */,
+				18ECD0F32672351800E57C63 /* CompositionCollectionViewCell.swift in Sources */,
 				78EA9A78266AA0C000B9D92A /* AchievementController.swift in Sources */,
 				780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */,
 				78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */,
