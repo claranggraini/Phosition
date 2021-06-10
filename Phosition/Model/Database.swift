@@ -32,23 +32,16 @@ class Database{
         return compositions
     }
     
-    public func getInstructions()->[Instruction]{
-        do{
-            self.compositions = try context.fetch(Composition.fetchRequest())
-            
-                for i in self.compositions{
-                    if let ins = i.instruction as? Set<Instruction> {
+    public func getInstructions(from composition: Composition)->[Instruction]{
+                
+        if let ins = composition.instruction as? Set<Instruction> {
                         
-                        for j in ins {
-                            instructions.append(j)
-                        }
+            for j in ins {
+                instructions.append(j)
+            }
                     
-                    }
-                    
-                }
-        }catch{
-            
         }
+       
         return instructions
     }
     
@@ -60,5 +53,13 @@ class Database{
             
         }
         return achievements
+    }
+    
+    public func updateDatabase(){
+        do{
+            try self.context.save()
+        }catch{
+            
+        }
     }
 }
