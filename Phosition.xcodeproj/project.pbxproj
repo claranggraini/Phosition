@@ -15,6 +15,9 @@
 		780E3181266DF414005D56B5 /* Phosition.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 780E3180266DF414005D56B5 /* Phosition.sqlite */; };
 		780E3184266DF485005D56B5 /* CongratulationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E3183266DF485005D56B5 /* CongratulationController.swift */; };
 		780E3186266DF4AD005D56B5 /* Congratulation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780E3185266DF4AD005D56B5 /* Congratulation.storyboard */; };
+		780E31CA26712BEF005D56B5 /* CongratulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E31C926712BEF005D56B5 /* CongratulationView.swift */; };
+		780E31CC2671338A005D56B5 /* CongratsPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E31CB2671338A005D56B5 /* CongratsPopUpController.swift */; };
+		780E31CE26713407005D56B5 /* CongratsPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E31CD26713407005D56B5 /* CongratsPopUpView.swift */; };
 		78E42046266CD73F00CB943C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E42045266CD73F00CB943C /* Database.swift */; };
 		78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A5F266A966B00B9D92A /* AppDelegate.swift */; };
 		78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A61266A966B00B9D92A /* SceneDelegate.swift */; };
@@ -39,6 +42,9 @@
 		780E3180266DF414005D56B5 /* Phosition.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phosition.sqlite; sourceTree = "<group>"; };
 		780E3183266DF485005D56B5 /* CongratulationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationController.swift; sourceTree = "<group>"; };
 		780E3185266DF4AD005D56B5 /* Congratulation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Congratulation.storyboard; sourceTree = "<group>"; };
+		780E31C926712BEF005D56B5 /* CongratulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationView.swift; sourceTree = "<group>"; };
+		780E31CB2671338A005D56B5 /* CongratsPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPopUpController.swift; sourceTree = "<group>"; };
+		780E31CD26713407005D56B5 /* CongratsPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPopUpView.swift; sourceTree = "<group>"; };
 		78E42045266CD73F00CB943C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		78EA9A5C266A966B00B9D92A /* Phosition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phosition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EA9A5F266A966B00B9D92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,10 +118,21 @@
 		780E3182266DF46A005D56B5 /* Congratulation */ = {
 			isa = PBXGroup;
 			children = (
+				780E31C826712B70005D56B5 /* PopUpCongratulation */,
 				780E3183266DF485005D56B5 /* CongratulationController.swift */,
 				780E3185266DF4AD005D56B5 /* Congratulation.storyboard */,
+				780E31C926712BEF005D56B5 /* CongratulationView.swift */,
 			);
 			path = Congratulation;
+			sourceTree = "<group>";
+		};
+		780E31C826712B70005D56B5 /* PopUpCongratulation */ = {
+			isa = PBXGroup;
+			children = (
+				780E31CB2671338A005D56B5 /* CongratsPopUpController.swift */,
+				780E31CD26713407005D56B5 /* CongratsPopUpView.swift */,
+			);
+			path = PopUpCongratulation;
 			sourceTree = "<group>";
 		};
 		78EA9A53266A966B00B9D92A = {
@@ -253,11 +270,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */,
+				780E31CC2671338A005D56B5 /* CongratsPopUpController.swift in Sources */,
+				780E31CE26713407005D56B5 /* CongratsPopUpView.swift in Sources */,
 				78EA9A64266A966B00B9D92A /* CompositionController.swift in Sources */,
 				78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */,
 				780E3184266DF485005D56B5 /* CongratulationController.swift in Sources */,
 				78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */,
 				780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */,
+				780E31CA26712BEF005D56B5 /* CongratulationView.swift in Sources */,
 				78EA9A78266AA0C000B9D92A /* AchievementController.swift in Sources */,
 				780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */,
 				78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */,

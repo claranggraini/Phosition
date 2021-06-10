@@ -8,22 +8,27 @@
 import UIKit
 
 class CongratulationController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    var selectedComp: Composition = Database.shared.getCompositions()[0]
+    
+    @IBOutlet var congratulationView: CongratulationView!
+    
+    @IBAction func retakePhoto(_ sender: UIButton) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func usePhoto(_ sender: UIButton) {
+        selectedComp.prog+=1
+        
+        performSegue(withIdentifier: "congratsPopUpSegue", sender: self)
     }
-    */
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "congratsPopUpSegue"{
+            let dest = segue.destination as! CongratsPopUpController
+            dest.congratsVC = self
+        }
+    }
 }

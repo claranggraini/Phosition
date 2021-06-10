@@ -1,32 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-VariableFont_wght.ttf">
+            <string>RalewayRoman-Bold</string>
+            <string>RalewayRoman-Medium</string>
+            <string>RalewayRoman-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Congratulation Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="CongratulationController" customModule="Phosition" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="CongratulationView" customModule="Phosition" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GR" translatesAutoresizingMaskIntoConstraints="NO" id="ZX1-J5-CrR">
+                                <rect key="frame" x="0.0" y="129" width="390" height="586"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-tG-6pg">
+                                <rect key="frame" x="24" y="760" width="59" height="26"/>
+                                <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="18"/>
+                                <state key="normal" title="Retake">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="retakePhoto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gWX-Nw-BJH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sx-33-oe4">
+                                <rect key="frame" x="283" y="752" width="87" height="34"/>
+                                <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="18"/>
+                                <state key="normal" title="Use Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="usePhoto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yWo-j4-Ih6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1ac-tG-6pg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="2iR-T8-b63"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1ac-tG-6pg" secondAttribute="bottom" constant="24" id="A12-vo-31M"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2Sx-33-oe4" secondAttribute="trailing" constant="20" id="FeO-0w-tQR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZX1-J5-CrR" secondAttribute="trailing" id="KKy-5y-Htr"/>
+                            <constraint firstItem="ZX1-J5-CrR" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="NX5-L6-ruB"/>
+                            <constraint firstItem="ZX1-J5-CrR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="85" id="Uza-e0-4Uy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="2Sx-33-oe4" secondAttribute="bottom" constant="24" id="Xz8-ET-xnz"/>
+                            <constraint firstItem="1ac-tG-6pg" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" constant="-84" id="hFC-9y-dt9"/>
+                            <constraint firstItem="ZX1-J5-CrR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zgc-8B-vhf"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="capturedImgIv" destination="ZX1-J5-CrR" id="LOp-2D-mMK"/>
+                            <outlet property="retakeBtn" destination="1ac-tG-6pg" id="GDf-cZ-ZO0"/>
+                            <outlet property="usePhotoBtn" destination="2Sx-33-oe4" id="ZlK-78-Rud"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="congratulationView" destination="5EZ-qb-Rvc" id="GpI-k0-SeX"/>
+                        <segue destination="Vk5-RU-ewE" kind="presentation" identifier="congratsPopUpSegue" modalPresentationStyle="overFullScreen" id="UWs-9R-C4B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16" y="54"/>
         </scene>
+        <!--Congrats Pop Up Controller-->
+        <scene sceneID="VyB-yN-lvB">
+            <objects>
+                <viewController id="Vk5-RU-ewE" customClass="CongratsPopUpController" customModule="Phosition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o61-V8-q8d">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E14-r2-KgN" customClass="CongratsPopUpView" customModule="Phosition" customModuleProvider="target">
+                                <rect key="frame" x="45" y="202" width="300" height="440"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="header-ROT" translatesAutoresizingMaskIntoConstraints="NO" id="wLg-W6-A3n">
+                                        <rect key="frame" x="30" y="40" width="240" height="195"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7K2-uF-Xrw">
+                                        <rect key="frame" x="30" y="251" width="240" height="28"/>
+                                        <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="24"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-em-2wn">
+                                        <rect key="frame" x="30" y="287" width="240" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="48U-gJ-Vyz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="14"/>
+                                        <color key="textColor" name="Grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XW-zU-hzZ">
+                                        <rect key="frame" x="51" y="394" width="198" height="34"/>
+                                        <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="18"/>
+                                        <state key="normal" title="Go to Achievements">
+                                            <color key="titleColor" name="Blue"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToAchievement:" destination="Vk5-RU-ewE" eventType="touchUpInside" id="F3D-Kl-H1F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNk-Al-g2X">
+                                        <rect key="frame" x="30" y="352" width="240" height="34"/>
+                                        <color key="backgroundColor" name="Blue"/>
+                                        <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="18"/>
+                                        <state key="normal" title="Next Course">
+                                            <color key="titleColor" name="Cream"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextCourse:" destination="Vk5-RU-ewE" eventType="touchUpInside" id="4Xd-Ga-r1X"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Cream"/>
+                                <constraints>
+                                    <constraint firstItem="wLg-W6-A3n" firstAttribute="leading" secondItem="E14-r2-KgN" secondAttribute="leading" constant="30" id="B8T-A2-wKG"/>
+                                    <constraint firstItem="7K2-uF-Xrw" firstAttribute="leading" secondItem="wLg-W6-A3n" secondAttribute="leading" id="BMH-jq-M3s"/>
+                                    <constraint firstAttribute="bottom" secondItem="2XW-zU-hzZ" secondAttribute="bottom" constant="12" id="Gby-bU-dhe"/>
+                                    <constraint firstItem="pbN-em-2wn" firstAttribute="leading" secondItem="wLg-W6-A3n" secondAttribute="leading" id="Jo8-b9-RBW"/>
+                                    <constraint firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" constant="30" id="KaU-ph-YeC"/>
+                                    <constraint firstItem="2XW-zU-hzZ" firstAttribute="leading" secondItem="E14-r2-KgN" secondAttribute="leading" constant="51" id="NIH-CX-Wop"/>
+                                    <constraint firstItem="pNk-Al-g2X" firstAttribute="top" secondItem="pbN-em-2wn" secondAttribute="bottom" constant="20" id="PoD-Wg-gDM"/>
+                                    <constraint firstItem="7K2-uF-Xrw" firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" id="RvN-cn-yLi"/>
+                                    <constraint firstItem="pNk-Al-g2X" firstAttribute="leading" secondItem="wLg-W6-A3n" secondAttribute="leading" id="SpK-Cn-pCB"/>
+                                    <constraint firstItem="2XW-zU-hzZ" firstAttribute="top" secondItem="pNk-Al-g2X" secondAttribute="bottom" constant="8" id="Z7V-Tr-PEZ"/>
+                                    <constraint firstItem="wLg-W6-A3n" firstAttribute="top" secondItem="E14-r2-KgN" secondAttribute="top" constant="40" id="dU7-qy-GgR"/>
+                                    <constraint firstAttribute="trailing" secondItem="2XW-zU-hzZ" secondAttribute="trailing" constant="51" id="fmb-rq-Pmv"/>
+                                    <constraint firstItem="7K2-uF-Xrw" firstAttribute="top" secondItem="wLg-W6-A3n" secondAttribute="bottom" constant="16" id="ojF-VH-iPG"/>
+                                    <constraint firstItem="pbN-em-2wn" firstAttribute="top" secondItem="7K2-uF-Xrw" secondAttribute="bottom" constant="8" id="ssl-2u-sOY"/>
+                                    <constraint firstItem="pbN-em-2wn" firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" id="uTD-zx-ZR4"/>
+                                    <constraint firstItem="pNk-Al-g2X" firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" id="yfb-6J-YNv"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="congratsDescLbl" destination="pbN-em-2wn" id="rBR-cm-nVi"/>
+                                    <outlet property="congratsIV" destination="wLg-W6-A3n" id="4H0-jw-vCH"/>
+                                    <outlet property="goToAchievementBtn" destination="2XW-zU-hzZ" id="vmc-1V-FLF"/>
+                                    <outlet property="nextCourseBtn" destination="pNk-Al-g2X" id="NeQ-F6-ku0"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S21-we-o4A"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S21-we-o4A" firstAttribute="trailing" secondItem="E14-r2-KgN" secondAttribute="trailing" constant="45" id="Des-Fy-y32"/>
+                            <constraint firstItem="E14-r2-KgN" firstAttribute="leading" secondItem="S21-we-o4A" secondAttribute="leading" constant="45" id="GGU-gZ-dDm"/>
+                            <constraint firstItem="S21-we-o4A" firstAttribute="bottom" secondItem="E14-r2-KgN" secondAttribute="bottom" constant="168" id="aN0-99-hI9"/>
+                            <constraint firstItem="E14-r2-KgN" firstAttribute="top" secondItem="S21-we-o4A" secondAttribute="top" constant="158" id="yTC-7u-mDP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="acQ-FI-4a2"/>
+                    <connections>
+                        <outlet property="congratsPopUpView" destination="E14-r2-KgN" id="oeG-Kv-wDr"/>
+                        <segue destination="cbU-AO-bY4" kind="show" identifier="nextCourseSegue" id="zQJ-Ef-gSG"/>
+                        <segue destination="0eL-AS-2SE" kind="unwind" identifier="unwindToAch" unwindAction="unwind:" id="djW-V7-c7G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EH-3d-gGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0eL-AS-2SE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="870.76923076923072" y="53.317535545023695"/>
+        </scene>
+        <!--Detail Composition-->
+        <scene sceneID="huE-BI-9YP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail Composition" id="cbU-AO-bY4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="r6P-zN-RgS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ba2-SJ-6KH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="167"/>
+        </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="GR" width="652" height="895"/>
+        <image name="header-ROT" width="390" height="327"/>
+        <namedColor name="Blue">
+            <color red="0.11800000071525574" green="0.31400001049041748" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Cream">
+            <color red="0.93300002813339233" green="0.9179999828338623" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grey">
+            <color red="0.42399999499320984" green="0.42399999499320984" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -20,11 +20,13 @@ class AchievementController: UIViewController {
             navBarAppearance.backgroundColor = UIColor(named: "Blue")
             self.navigationController!.navigationBar.standardAppearance = navBarAppearance
             self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
-//            let attributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 17)!]
-//            UINavigationBar.appearance().titleTextAttributes = attributes
         }
     }
 
-
+    @IBAction func unwind(_ segue: UIStoryboardSegue){
+        DispatchQueue.main.async {
+            self.viewDidLoad()
+        }
+    }
    
 }

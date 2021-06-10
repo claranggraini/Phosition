@@ -15,8 +15,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcs-5n-kJT">
+                                <rect key="frame" x="150" y="393" width="140" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="camera"/>
+                                <connections>
+                                    <segue destination="2VJ-cb-9oz" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="jnk-UA-Rcv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Cream"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jcs-5n-kJT" secondAttribute="trailing" constant="100" id="5XT-Ce-arO"/>
+                            <constraint firstItem="jcs-5n-kJT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="F6f-y9-gSH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jcs-5n-kJT" secondAttribute="bottom" constant="338" id="PSh-NI-XKQ"/>
+                            <constraint firstItem="jcs-5n-kJT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="253" id="fN5-Fo-4ZJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Phosition" id="TnI-sA-bgw"/>
                 </viewController>
@@ -24,10 +40,20 @@
             </objects>
             <point key="canvasLocation" x="1878.4615384615383" y="93.838862559241704"/>
         </scene>
+        <!--Congratulation-->
+        <scene sceneID="qFK-K9-83K">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Congratulation" id="2VJ-cb-9oz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nyb-pa-hpk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwC-Sz-edX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2564" y="94"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CFR-As-UhZ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ihr-BJ-4ZS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="Ihr-BJ-4ZS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="YDd-4d-7JX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
