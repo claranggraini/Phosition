@@ -8,7 +8,7 @@
 import UIKit
 
 class CongratulationController: UIViewController {
-    var selectedComp: Composition = Database.shared.getCompositions()[0]
+    lazy var selectedComp: Composition = Database.shared.getCompositions()[0]
     
     @IBOutlet var congratulationView: CongratulationView!
     
@@ -20,6 +20,8 @@ class CongratulationController: UIViewController {
         
         performSegue(withIdentifier: "congratsPopUpSegue", sender: self)
     }
+    
+    lazy var instructions = Database.shared.getInstructions(from: selectedComp)
     
     override func viewDidLoad() {
         super.viewDidLoad()
