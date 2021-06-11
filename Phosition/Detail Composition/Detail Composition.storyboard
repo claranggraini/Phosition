@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rule of Third-->
+        <!--Composition-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="DetailCompositionController" customModule="Phosition" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="DetailCompositionView" customModule="Phosition" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gJp-WX-t0y">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-150" width="414" height="1046"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" name="Cream"/>
@@ -54,14 +54,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gJp-WX-t0y" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="8dK-r0-XqD"/>
-                            <constraint firstItem="gJp-WX-t0y" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="LQN-cs-Ud4"/>
+                            <constraint firstItem="gJp-WX-t0y" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-150" id="LQN-cs-Ud4"/>
                             <constraint firstItem="gJp-WX-t0y" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Tyh-un-09g"/>
                             <constraint firstItem="gJp-WX-t0y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rbp-9a-erQ"/>
                         </constraints>
+                        <connections>
+                            <outlet property="detailCompositionTableView" destination="gJp-WX-t0y" id="lJ3-nY-GO6"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Rule of Third" id="SWq-ZX-b0G"/>
+                    <navigationItem key="navigationItem" title="Composition" id="SWq-ZX-b0G"/>
                     <connections>
-                        <outlet property="detailCompositionTableView" destination="gJp-WX-t0y" id="F2b-Oa-mZr"/>
+                        <outlet property="detailCompositionView" destination="5EZ-qb-Rvc" id="EAj-f9-wkD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

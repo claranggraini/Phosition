@@ -12,6 +12,8 @@ class DescriptionTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionImage: UIImageView!
     @IBOutlet weak var descriptionTextLabel: UILabel!
     
+    
+    
 //    var detailComposition: DetailComposition? {
 //        didSet{
 //            setupView()

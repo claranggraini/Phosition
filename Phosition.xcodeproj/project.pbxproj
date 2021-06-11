@@ -29,12 +29,11 @@
 		78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */; };
 		78EA9A91266AAA2F00B9D92A /* Achievement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */; };
 		C7BEFF762671255600344E6C /* DetailCompositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEFF752671255600344E6C /* DetailCompositionView.swift */; };
-		C7D1DA6F266E74C400ECC7E8 /* DetailComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA6E266E74C400ECC7E8 /* DetailComposition.swift */; };
+		C7BEFF7B26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEFF7A26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift */; };
 		C7D1DA73266E751600ECC7E8 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */; };
 		C7D1DA74266E751600ECC7E8 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D1DA72266E751600ECC7E8 /* DescriptionTableViewCell.xib */; };
 		C7D1DA77266E754600ECC7E8 /* InstructionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA75266E754600ECC7E8 /* InstructionTableViewCell.swift */; };
 		C7D1DA78266E754600ECC7E8 /* InstructionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D1DA76266E754600ECC7E8 /* InstructionTableViewCell.xib */; };
-		C7D1DA7A266EA0E200ECC7E8 /* DetailCompositionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA79266EA0E200ECC7E8 /* DetailCompositionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,12 +61,11 @@
 		78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instruction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C7BEFF752671255600344E6C /* DetailCompositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCompositionView.swift; sourceTree = "<group>"; };
-		C7D1DA6E266E74C400ECC7E8 /* DetailComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailComposition.swift; sourceTree = "<group>"; };
+		C7BEFF7A26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailCompositionDataSource+Delegate.swift"; sourceTree = "<group>"; };
 		C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		C7D1DA72266E751600ECC7E8 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		C7D1DA75266E754600ECC7E8 /* InstructionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionTableViewCell.swift; sourceTree = "<group>"; };
 		C7D1DA76266E754600ECC7E8 /* InstructionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionTableViewCell.xib; sourceTree = "<group>"; };
-		C7D1DA79266EA0E200ECC7E8 /* DetailCompositionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCompositionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				780E317C266DEE4D005D56B5 /* Detail Composition.storyboard */,
-				C7D1DA6E266E74C400ECC7E8 /* DetailComposition.swift */,
-				C7D1DA79266EA0E200ECC7E8 /* DetailCompositionData.swift */,
 				780E317E266DEE78005D56B5 /* DetailCompositionController.swift */,
+				C7BEFF7A26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift */,
 				C7BEFF752671255600344E6C /* DetailCompositionView.swift */,
 				C74B76E0266F38CE004E8F5B /* UI */,
 			);
@@ -299,7 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D1DA6F266E74C400ECC7E8 /* DetailComposition.swift in Sources */,
 				78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */,
 				78EA9A64266A966B00B9D92A /* CompositionController.swift in Sources */,
 				78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */,
@@ -307,7 +303,6 @@
 				78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */,
 				C7BEFF762671255600344E6C /* DetailCompositionView.swift in Sources */,
 				C7D1DA77266E754600ECC7E8 /* InstructionTableViewCell.swift in Sources */,
-				C7D1DA7A266EA0E200ECC7E8 /* DetailCompositionData.swift in Sources */,
 				780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */,
 				78EA9A78266AA0C000B9D92A /* AchievementController.swift in Sources */,
 				780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */,
@@ -316,6 +311,7 @@
 				78EA9A6A266A966B00B9D92A /* Phosition.xcdatamodeld in Sources */,
 				C7D1DA73266E751600ECC7E8 /* DescriptionTableViewCell.swift in Sources */,
 				78EA9A91266AAA2F00B9D92A /* Achievement+CoreDataClass.swift in Sources */,
+				C7BEFF7B26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
