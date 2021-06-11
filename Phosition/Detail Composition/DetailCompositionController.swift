@@ -11,8 +11,6 @@ class DetailCompositionController: UIViewController {
     
     var selectedComposition: String = "Rule of Thirds"
     
-    var type: CompositionType?
-
     @IBOutlet var detailCompositionView: DetailCompositionView!
 
     lazy var compositions = Database.shared.getCompositions()
