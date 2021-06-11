@@ -64,7 +64,7 @@
                                         <connections>
                                             <outlet property="CompImageView" destination="7jN-Za-7Qi" id="trJ-Ke-rgP"/>
                                             <outlet property="CompTitleLabel" destination="do6-D5-Bi5" id="4AL-HY-jCb"/>
-                                            <outlet property="backgroundColorVIew" destination="Kge-QP-F55" id="dHo-Oi-kqw"/>
+                                            <outlet property="backgroundColorView" destination="Kge-QP-F55" id="pTR-tc-8HO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
