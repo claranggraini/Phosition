@@ -14,6 +14,7 @@ class CongratsPopUpController: UIViewController {
         performSegue(withIdentifier: "nextCourseSegue", sender: self)
     }
     var congratsVC: CongratulationController?
+    var congratsMsg = ""
     @IBAction func goToAchievement(_ sender: UIButton) {
        performSegue(withIdentifier: "unwindToAch", sender: self)
         print("Segue")
@@ -25,5 +26,6 @@ class CongratsPopUpController: UIViewController {
 
         congratsPopUpView.setup()
         congratsPopUpView.congratsIV.image = UIImage.animatedImage(with: images, duration: 2)
+        congratsPopUpView.congratsDescLbl.text = congratsMsg
     }
 }

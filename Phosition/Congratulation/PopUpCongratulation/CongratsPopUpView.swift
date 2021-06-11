@@ -21,7 +21,6 @@ class CongratsPopUpView: UIView {
     
     func setup(){
         self.layer.cornerRadius = 20
-        congratsDescLbl.text = "You have unlocked \(countAch) achievement\nYour photo is saved on Photos"
         nextCourseBtn.layer.cornerRadius = 8
     }
 }

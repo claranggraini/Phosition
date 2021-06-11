@@ -87,18 +87,22 @@
                                 <rect key="frame" x="45" y="202" width="300" height="440"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="header-ROT" translatesAutoresizingMaskIntoConstraints="NO" id="wLg-W6-A3n">
-                                        <rect key="frame" x="30" y="40" width="240" height="195"/>
+                                        <rect key="frame" x="30" y="20" width="240" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="TkV-h5-QEb"/>
+                                            <constraint firstAttribute="height" constant="200" id="lme-vV-kmQ"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7K2-uF-Xrw">
-                                        <rect key="frame" x="30" y="251" width="240" height="28"/>
+                                        <rect key="frame" x="30" y="236" width="240" height="28"/>
                                         <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="24"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-em-2wn">
-                                        <rect key="frame" x="30" y="287" width="240" height="45"/>
+                                        <rect key="frame" x="30" y="272" width="240" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="48U-gJ-Vyz"/>
+                                            <constraint firstAttribute="height" constant="60" id="48U-gJ-Vyz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="14"/>
                                         <color key="textColor" name="Grey"/>
@@ -128,20 +132,20 @@
                                 </subviews>
                                 <color key="backgroundColor" name="Cream"/>
                                 <constraints>
+                                    <constraint firstItem="pNk-Al-g2X" firstAttribute="top" secondItem="pbN-em-2wn" secondAttribute="bottom" constant="20" id="6xB-LL-d7l"/>
                                     <constraint firstItem="wLg-W6-A3n" firstAttribute="leading" secondItem="E14-r2-KgN" secondAttribute="leading" constant="30" id="B8T-A2-wKG"/>
                                     <constraint firstItem="7K2-uF-Xrw" firstAttribute="leading" secondItem="wLg-W6-A3n" secondAttribute="leading" id="BMH-jq-M3s"/>
                                     <constraint firstAttribute="bottom" secondItem="2XW-zU-hzZ" secondAttribute="bottom" constant="12" id="Gby-bU-dhe"/>
                                     <constraint firstItem="pbN-em-2wn" firstAttribute="leading" secondItem="wLg-W6-A3n" secondAttribute="leading" id="Jo8-b9-RBW"/>
                                     <constraint firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" constant="30" id="KaU-ph-YeC"/>
                                     <constraint firstItem="2XW-zU-hzZ" firstAttribute="leading" secondItem="E14-r2-KgN" secondAttribute="leading" constant="51" id="NIH-CX-Wop"/>
-                                    <constraint firstItem="pNk-Al-g2X" firstAttribute="top" secondItem="pbN-em-2wn" secondAttribute="bottom" constant="20" id="PoD-Wg-gDM"/>
                                     <constraint firstItem="7K2-uF-Xrw" firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" id="RvN-cn-yLi"/>
                                     <constraint firstItem="pNk-Al-g2X" firstAttribute="leading" secondItem="wLg-W6-A3n" secondAttribute="leading" id="SpK-Cn-pCB"/>
+                                    <constraint firstItem="pbN-em-2wn" firstAttribute="top" secondItem="7K2-uF-Xrw" secondAttribute="bottom" constant="8" id="VNQ-he-LFX"/>
                                     <constraint firstItem="2XW-zU-hzZ" firstAttribute="top" secondItem="pNk-Al-g2X" secondAttribute="bottom" constant="8" id="Z7V-Tr-PEZ"/>
-                                    <constraint firstItem="wLg-W6-A3n" firstAttribute="top" secondItem="E14-r2-KgN" secondAttribute="top" constant="40" id="dU7-qy-GgR"/>
+                                    <constraint firstItem="wLg-W6-A3n" firstAttribute="top" secondItem="E14-r2-KgN" secondAttribute="top" constant="20" id="dU7-qy-GgR"/>
                                     <constraint firstAttribute="trailing" secondItem="2XW-zU-hzZ" secondAttribute="trailing" constant="51" id="fmb-rq-Pmv"/>
                                     <constraint firstItem="7K2-uF-Xrw" firstAttribute="top" secondItem="wLg-W6-A3n" secondAttribute="bottom" constant="16" id="ojF-VH-iPG"/>
-                                    <constraint firstItem="pbN-em-2wn" firstAttribute="top" secondItem="7K2-uF-Xrw" secondAttribute="bottom" constant="8" id="ssl-2u-sOY"/>
                                     <constraint firstItem="pbN-em-2wn" firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" id="uTD-zx-ZR4"/>
                                     <constraint firstItem="pNk-Al-g2X" firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" id="yfb-6J-YNv"/>
                                 </constraints>
