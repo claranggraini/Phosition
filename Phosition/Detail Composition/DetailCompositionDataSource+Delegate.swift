@@ -29,6 +29,7 @@ extension DetailCompositionController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let index = selectedIndex
+            print("Controller: Description index is \(index)")
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
             guard let headerImage = compositions[index].header_img else {return cell}
@@ -40,6 +41,7 @@ extension DetailCompositionController: UITableViewDataSource {
             return cell
         case 1:
             //TODO: -Masih Acak
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "instructionTableViewCell", for: indexPath) as! InstructionTableViewCell
             guard let instructionImage = instructions[indexPath.row].image else {return cell}
             cell.instructionImage.image = UIImage(named: instructionImage)

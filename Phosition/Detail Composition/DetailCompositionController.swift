@@ -26,12 +26,18 @@ class DetailCompositionController: UIViewController {
         super.viewDidLoad()
         
         if #available(iOS 13.0, *) {
+            let navBarSetting = UINavigationBarAppearance()
+            navBarSetting.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!, .font: UIFont(name: "Raleway Thin Bold", size: 34)!]
+            self.navigationController!.navigationBar.standardAppearance = navBarSetting
+            self.title = selectedComposition
+            
             detailCompositionView?.setup()
             detailCompositionView?.detailCompositionTableView.dataSource = self
             print("Hoho")
             
             selectedIndex = selectComposition()
-            print("Selected index is \(selectedIndex)")
+            print("Controller: Selected index is \(selectedIndex)")
+            
         }
     }
 }

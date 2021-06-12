@@ -51,7 +51,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Cream"/>
                         <constraints>
                             <constraint firstItem="gJp-WX-t0y" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="8dK-r0-XqD"/>
                             <constraint firstItem="gJp-WX-t0y" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-150" id="LQN-cs-Ud4"/>
