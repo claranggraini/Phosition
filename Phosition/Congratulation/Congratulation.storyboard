@@ -108,7 +108,7 @@
                                         <color key="textColor" name="Grey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XW-zU-hzZ">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XW-zU-hzZ">
                                         <rect key="frame" x="51" y="394" width="198" height="34"/>
                                         <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="18"/>
                                         <state key="normal" title="Go to Achievements">
@@ -118,7 +118,7 @@
                                             <action selector="goToAchievement:" destination="Vk5-RU-ewE" eventType="touchUpInside" id="F3D-Kl-H1F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNk-Al-g2X">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNk-Al-g2X">
                                         <rect key="frame" x="30" y="352" width="240" height="34"/>
                                         <color key="backgroundColor" name="Blue"/>
                                         <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="18"/>

@@ -18,6 +18,8 @@
 		780E31CA26712BEF005D56B5 /* CongratulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E31C926712BEF005D56B5 /* CongratulationView.swift */; };
 		780E31CC2671338A005D56B5 /* CongratsPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E31CB2671338A005D56B5 /* CongratsPopUpController.swift */; };
 		780E31CE26713407005D56B5 /* CongratsPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E31CD26713407005D56B5 /* CongratsPopUpView.swift */; };
+		78C368AB2677536900F82E00 /* CompCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368A92677536900F82E00 /* CompCollectionViewCell.swift */; };
+		78C368AC2677536900F82E00 /* CompCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C368AA2677536900F82E00 /* CompCollectionViewCell.xib */; };
 		78E42046266CD73F00CB943C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E42045266CD73F00CB943C /* Database.swift */; };
 		78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A5F266A966B00B9D92A /* AppDelegate.swift */; };
 		78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A61266A966B00B9D92A /* SceneDelegate.swift */; };
@@ -51,6 +53,8 @@
 		780E31C926712BEF005D56B5 /* CongratulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationView.swift; sourceTree = "<group>"; };
 		780E31CB2671338A005D56B5 /* CongratsPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPopUpController.swift; sourceTree = "<group>"; };
 		780E31CD26713407005D56B5 /* CongratsPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPopUpView.swift; sourceTree = "<group>"; };
+		78C368A92677536900F82E00 /* CompCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompCollectionViewCell.swift; sourceTree = "<group>"; };
+		78C368AA2677536900F82E00 /* CompCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompCollectionViewCell.xib; sourceTree = "<group>"; };
 		78E42045266CD73F00CB943C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		78EA9A5C266A966B00B9D92A /* Phosition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phosition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EA9A5F266A966B00B9D92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		780E316D266D3C1C005D56B5 /* Composition */ = {
 			isa = PBXGroup;
 			children = (
+				78C368A82677533700F82E00 /* CompositionCell */,
 				78EA9A63266A966B00B9D92A /* CompositionController.swift */,
 			);
 			path = Composition;
@@ -148,6 +153,15 @@
 				780E31CD26713407005D56B5 /* CongratsPopUpView.swift */,
 			);
 			path = PopUpCongratulation;
+			sourceTree = "<group>";
+		};
+		78C368A82677533700F82E00 /* CompositionCell */ = {
+			isa = PBXGroup;
+			children = (
+				78C368A92677536900F82E00 /* CompCollectionViewCell.swift */,
+				78C368AA2677536900F82E00 /* CompCollectionViewCell.xib */,
+			);
+			path = CompositionCell;
 			sourceTree = "<group>";
 		};
 		78EA9A53266A966B00B9D92A = {
@@ -293,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				780E3186266DF4AD005D56B5 /* Congratulation.storyboard in Resources */,
+				78C368AC2677536900F82E00 /* CompCollectionViewCell.xib in Resources */,
 				78EA9A6F266A966C00B9D92A /* LaunchScreen.storyboard in Resources */,
 				C7D1DA78266E754600ECC7E8 /* InstructionTableViewCell.xib in Resources */,
 				780E3176266D60A3005D56B5 /* Camera.storyboard in Resources */,
@@ -330,6 +345,7 @@
 				78E42046266CD73F00CB943C /* Database.swift in Sources */,
 				78EA9A6A266A966B00B9D92A /* Phosition.xcdatamodeld in Sources */,
 				C7D1DA73266E751600ECC7E8 /* DescriptionTableViewCell.swift in Sources */,
+				78C368AB2677536900F82E00 /* CompCollectionViewCell.swift in Sources */,
 				78EA9A91266AAA2F00B9D92A /* Achievement+CoreDataClass.swift in Sources */,
 				C7BEFF7B26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift in Sources */,
 			);
