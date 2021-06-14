@@ -10,21 +10,12 @@ import CoreData
 
 class CompositionController: UIViewController {
     
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
-    var compositions = Composition
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        func fetchComposition() {
-//            DispatchQueue.main.async {
-//                self.collectionView.reloadData()
-//            }
-//        }
-        
+                
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()

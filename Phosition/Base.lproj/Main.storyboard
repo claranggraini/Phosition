@@ -9,11 +9,6 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Raleway-VariableFont_wght.ttf">
-            <string>RalewayRoman-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Phosition-->
         <scene sceneID="tne-QT-ifu">
@@ -23,57 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2NW-PQ-Qa6">
-                                <rect key="frame" x="16" y="160" width="358" height="517"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mkY-Ir-loo">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Ag-aU-YGr">
-                                    <size key="itemSize" width="325" height="447"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BoN-UC-J38">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CompositionCollectionViewCell" id="99U-f9-WkD" customClass="CompositionCollectionViewCell" customModule="Phosition" customModuleProvider="target">
-                                        <rect key="frame" x="16.666666666666668" y="0.0" width="325" height="447"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="czI-hd-ERO">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sC6-07-Oou">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="447"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MmV-xv-GWa">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ROT" translatesAutoresizingMaskIntoConstraints="NO" id="7jN-Za-7Qi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="447"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kge-QP-F55">
-                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="447"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rule of Third" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do6-D5-Bi5">
-                                                            <rect key="frame" x="14" y="334" width="196" height="38"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="32"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </view>
-                                            </subviews>
                                         </collectionViewCellContentView>
-                                        <connections>
-                                            <outlet property="CompImageView" destination="7jN-Za-7Qi" id="trJ-Ke-rgP"/>
-                                            <outlet property="CompTitleLabel" destination="do6-D5-Bi5" id="4AL-HY-jCb"/>
-                                            <outlet property="backgroundColorView" destination="Kge-QP-F55" id="pTR-tc-8HO"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2cR-vl-Ivh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dnT-V3-WBf"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Cream"/>
+                        <constraints>
+                            <constraint firstItem="mkY-Ir-loo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KHQ-NC-3qk"/>
+                            <constraint firstItem="mkY-Ir-loo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XaG-pT-EvP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mkY-Ir-loo" secondAttribute="bottom" id="oRc-2H-Ucc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mkY-Ir-loo" secondAttribute="trailing" id="s8r-Wu-eTa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Phosition" id="TnI-sA-bgw"/>
+                    <connections>
+                        <outlet property="collectionView" destination="mkY-Ir-loo" id="bCu-lN-mgo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,7 +126,6 @@
     </scenes>
     <resources>
         <image name="Composition 25x25" width="25" height="25"/>
-        <image name="ROT" width="652" height="895"/>
         <namedColor name="Blue">
             <color red="0.11800000071525574" green="0.31400001049041748" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

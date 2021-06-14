@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1893DEA4267711CD00DBCA50 /* CompCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893DEA2267711CD00DBCA50 /* CompCollectionViewCell.swift */; };
+		1893DEA5267711CD00DBCA50 /* CompCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1893DEA3267711CD00DBCA50 /* CompCollectionViewCell.xib */; };
 		18ECD0F32672351800E57C63 /* CompositionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECD0F22672351800E57C63 /* CompositionCollectionViewCell.swift */; };
 		780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E3168266D3BCC005D56B5 /* CameraController.swift */; };
 		780E3174266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 780E3173266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1893DEA2267711CD00DBCA50 /* CompCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompCollectionViewCell.swift; sourceTree = "<group>"; };
+		1893DEA3267711CD00DBCA50 /* CompCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompCollectionViewCell.xib; sourceTree = "<group>"; };
 		18ECD0F22672351800E57C63 /* CompositionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionCollectionViewCell.swift; sourceTree = "<group>"; };
 		780E3168266D3BCC005D56B5 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		780E3173266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -81,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1893DEA1267711AE00DBCA50 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1893DEA2267711CD00DBCA50 /* CompCollectionViewCell.swift */,
+				1893DEA3267711CD00DBCA50 /* CompCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		780E3166266D3AA1005D56B5 /* PreloadData */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		780E316D266D3C1C005D56B5 /* Composition */ = {
 			isa = PBXGroup;
 			children = (
+				1893DEA1267711AE00DBCA50 /* Cells */,
 				78EA9A63266A966B00B9D92A /* CompositionController.swift */,
 			);
 			path = Composition;
@@ -273,6 +287,7 @@
 				780E3186266DF4AD005D56B5 /* Congratulation.storyboard in Resources */,
 				78EA9A6F266A966C00B9D92A /* LaunchScreen.storyboard in Resources */,
 				780E3176266D60A3005D56B5 /* Camera.storyboard in Resources */,
+				1893DEA5267711CD00DBCA50 /* CompCollectionViewCell.xib in Resources */,
 				78EA9A6C266A966C00B9D92A /* Assets.xcassets in Resources */,
 				780E317D266DEE4D005D56B5 /* Detail Composition.storyboard in Resources */,
 				780E3174266D55F7005D56B5 /* Raleway-VariableFont_wght.ttf in Resources */,
@@ -291,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */,
+				1893DEA4267711CD00DBCA50 /* CompCollectionViewCell.swift in Sources */,
 				78EA9A64266A966B00B9D92A /* CompositionController.swift in Sources */,
 				78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */,
 				780E3197266FC901005D56B5 /* AchievementViewController + TVDataSource + TVDelegate.swift in Sources */,
