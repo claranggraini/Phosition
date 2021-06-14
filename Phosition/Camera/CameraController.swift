@@ -14,10 +14,11 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
     var bufferSize: CGSize = .zero
     var rootLayer: CALayer! = nil
     var takePicture = false
+    var grid = false
     
     @IBOutlet weak public var imageVieww: UIImageView!
     @IBOutlet weak private var gridView: UIView!
-    @IBOutlet weak private var previewView: UIView!
+    @IBOutlet weak public var previewView: UIView!
     @IBOutlet weak private var photoButton: UIButton!
     private let session = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
@@ -35,10 +36,26 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         photoButton.tintColor = .white
         photoButton.layer.cornerRadius = 50
         setupAVCapture()
+        drawGrid()
+        
     }
     
+//    override func drawRect(rect: CGRect) {
+//        let aPath = UIBezierPath()
+//
+//        aPath.move(to: CGPoint(x: gridView.frame.minX, y: gridView.frame.minY))
+//        aPath.addLine(to: CGPoint(x: gridView.frame.maxX, y: gridView.frame.maxY))
+//
+//        // Keep using the method addLine until you get to the one where about to close the path
+//        aPath.close()
+//
+//        // If you want to stroke it with a red color
+//        UIColor.red.set()
+//        aPath.lineWidth = 1
+//        aPath.stroke()
+//    }
+    
     @IBAction func onTapTakePhoto(_ sender: Any){
-        print("tapped button")
         takePicture = true
         photoButton.backgroundColor = .secondaryLabel
     }
@@ -134,4 +151,70 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         return exifOrientation
     }
     
+    func drawGrid() {
+        // create path
+
+        let patha = UIBezierPath()
+        patha.move(to: CGPoint(x: gridView.frame.width/3, y: 3))
+        patha.addLine(to: CGPoint(x: gridView.frame.width/3, y: gridView.frame.height+3))
+        
+        let pathb = UIBezierPath()
+        patha.move(to: CGPoint(x: gridView.frame.width*2/3, y: 3))
+        patha.addLine(to: CGPoint(x: gridView.frame.width*2/3, y: gridView.frame.height+3))
+        
+        let pathc = UIBezierPath()
+        pathc.move(to: CGPoint(x: 0, y: gridView.frame.height/3+3))
+        pathc.addLine(to: CGPoint(x: gridView.frame.width, y: gridView.frame.height/3+3))
+        
+        let pathd = UIBezierPath()
+        pathd.move(to: CGPoint(x: 0, y: gridView.frame.height*2/3+3))
+        pathd.addLine(to: CGPoint(x: gridView.frame.width, y: gridView.frame.height*2/3+3))
+
+        // Create a `CAShapeLayer` that uses that `UIBezierPath`:
+        
+        let shapeLayera = CAShapeLayer()
+        shapeLayera.path = patha.cgPath
+        shapeLayera.strokeColor = UIColor.white.cgColor
+        shapeLayera.fillColor = UIColor.clear.cgColor
+        shapeLayera.lineWidth = 1
+        
+        let shapeLayerb = CAShapeLayer()
+        shapeLayerb.path = pathb.cgPath
+        shapeLayerb.strokeColor = UIColor.white.cgColor
+        shapeLayerb.fillColor = UIColor.clear.cgColor
+        shapeLayerb.lineWidth = 1
+        
+        let shapeLayerc = CAShapeLayer()
+        shapeLayerc.path = pathc.cgPath
+        shapeLayerc.strokeColor = UIColor.white.cgColor
+        shapeLayerc.fillColor = UIColor.clear.cgColor
+        shapeLayerc.lineWidth = 1
+        
+        let shapeLayerd = CAShapeLayer()
+        shapeLayerd.path = pathd.cgPath
+        shapeLayerd.strokeColor = UIColor.white.cgColor
+        shapeLayerd.fillColor = UIColor.clear.cgColor
+        shapeLayerd.lineWidth = 1
+
+        // Add that `CAShapeLayer` to your view's layer:
+
+        gridView.layer.addSublayer(shapeLayera)
+        gridView.layer.addSublayer(shapeLayerb)
+        gridView.layer.addSublayer(shapeLayerc)
+        gridView.layer.addSublayer(shapeLayerd)
+        
+        gridView.isHidden = true
+    }
+    
+    @IBAction func onTapGridShow(_ sender: Any){
+        print("tapped button")
+        if grid == false {
+            gridView.isHidden = false
+            grid = true
+        } else {
+            gridView.isHidden = true
+            grid = false
+        }
+    }
 }
+

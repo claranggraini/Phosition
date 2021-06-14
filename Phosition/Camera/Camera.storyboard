@@ -38,12 +38,22 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ngU-jD-1lZ">
                                 <rect key="frame" x="0.0" y="144" width="400" height="519"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIE-mq-hHS">
+                                        <rect key="frame" x="18" y="-86" width="154" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIE-mq-hHS">
-                                <rect key="frame" x="220" y="44" width="154" height="210"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctR-Y7-Wzb">
+                                <rect key="frame" x="344" y="106" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" image="Outline-ROT"/>
+                                <connections>
+                                    <action selector="onTapGridShow:" destination="1L6-zU-6GX" eventType="touchUpInside" id="NMu-yC-FfA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eDI-vw-kOk"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +66,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gridView" destination="ngU-jD-1lZ" id="QvW-7E-qbx"/>
+                        <outlet property="gridView" destination="ngU-jD-1lZ" id="Wdf-A2-x0o"/>
                         <outlet property="imageVieww" destination="UIE-mq-hHS" id="fPk-tJ-PTw"/>
                         <outlet property="photoButton" destination="ipu-x8-CFN" id="sWG-eH-ALK"/>
                         <outlet property="previewView" destination="9Xe-qy-gJ0" id="sng-AU-I0J"/>
@@ -68,6 +78,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Outline-ROT" width="30" height="30"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

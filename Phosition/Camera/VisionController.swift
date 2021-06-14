@@ -184,15 +184,26 @@ class VisionController: CameraController {
         shapeLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
 //        print(bounds.midX)
 //        print(bounds.midY)
-        let screenRect: CGRect = UIScreen.main.bounds
-        print(screenRect.width)
+        let screenRect: CGRect = previewView.frame
+        let position1 = screenRect.height*2/3 + screenRect.minY - 20
+        let position2 = screenRect.height/3 + screenRect.minY - 20
+        print(screenRect.height*2/3 + screenRect.minY)
+//        print(bounds.minX)
+//        print(bounds.maxX)
 //        print(screenRect.height)
 //        print(bounds.midX)
-        print(bounds.midY)
-        print(bounds.midY - screenRect.width/3)
-        print(bounds.midY - screenRect.width/3*2)
+//        print(bounds.midY)
+//        print(bounds.midY - screenRect.width/3)
+//        print(bounds.midY - screenRect.width/3*2)
         shapeLayer.name = "Found Object"
-        shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 0.2, 0.4])
+//        shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 0.2, 0.4])
+        if bounds.minX < position1 && bounds.maxX > position1 {
+            shapeLayer.backgroundColor = UIColor.green.withAlphaComponent(0.5).cgColor
+        } else if bounds.minX < position2 && bounds.maxX > position2 {
+            shapeLayer.backgroundColor = UIColor.green.withAlphaComponent(0.5).cgColor
+        } else {
+            shapeLayer.backgroundColor = UIColor.red.withAlphaComponent(0.5).cgColor
+        }
         shapeLayer.cornerRadius = 7
         return shapeLayer
     }
