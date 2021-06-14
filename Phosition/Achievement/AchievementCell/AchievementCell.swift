@@ -2,16 +2,18 @@
 //  AchievementCell.swift
 //  Phosition
 //
-//  Created by Clara Anggraini on 14/06/21.
+//  Created by Clara Anggraini on 11/06/21.
 //
 
 import UIKit
 
 class AchievementCell: UICollectionViewCell {
 
+    @IBOutlet weak var achievementIV: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        achievementIV.layer.cornerRadius = 10
     }
 
 }

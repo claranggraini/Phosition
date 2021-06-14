@@ -22,6 +22,10 @@
 		78C368AC2677536900F82E00 /* CompCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C368AA2677536900F82E00 /* CompCollectionViewCell.xib */; };
 		78C368B02677A12000F82E00 /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368AE2677A12000F82E00 /* AchievementCell.swift */; };
 		78C368B12677A12000F82E00 /* AchievementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C368AF2677A12000F82E00 /* AchievementCell.xib */; };
+		78C368B32677A1BD00F82E00 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368B22677A1BD00F82E00 /* AchievementView.swift */; };
+		78C368B52677A1EA00F82E00 /* AchievementViewController + TVDataSource + TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368B42677A1EA00F82E00 /* AchievementViewController + TVDataSource + TVDelegate.swift */; };
+		78C368B82677A22900F82E00 /* DetailAchievementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368B72677A22900F82E00 /* DetailAchievementController.swift */; };
+		78C368BA2677A24D00F82E00 /* DetailAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368B92677A24D00F82E00 /* DetailAchievementView.swift */; };
 		78E42046266CD73F00CB943C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E42045266CD73F00CB943C /* Database.swift */; };
 		78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A5F266A966B00B9D92A /* AppDelegate.swift */; };
 		78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A61266A966B00B9D92A /* SceneDelegate.swift */; };
@@ -59,6 +63,10 @@
 		78C368AA2677536900F82E00 /* CompCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompCollectionViewCell.xib; sourceTree = "<group>"; };
 		78C368AE2677A12000F82E00 /* AchievementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
 		78C368AF2677A12000F82E00 /* AchievementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementCell.xib; sourceTree = "<group>"; };
+		78C368B22677A1BD00F82E00 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
+		78C368B42677A1EA00F82E00 /* AchievementViewController + TVDataSource + TVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementViewController + TVDataSource + TVDelegate.swift"; sourceTree = "<group>"; };
+		78C368B72677A22900F82E00 /* DetailAchievementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAchievementController.swift; sourceTree = "<group>"; };
+		78C368B92677A24D00F82E00 /* DetailAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAchievementView.swift; sourceTree = "<group>"; };
 		78E42045266CD73F00CB943C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		78EA9A5C266A966B00B9D92A /* Phosition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phosition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EA9A5F266A966B00B9D92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +185,15 @@
 			path = AchievementCell;
 			sourceTree = "<group>";
 		};
+		78C368B62677A20000F82E00 /* DetailAchievement */ = {
+			isa = PBXGroup;
+			children = (
+				78C368B72677A22900F82E00 /* DetailAchievementController.swift */,
+				78C368B92677A24D00F82E00 /* DetailAchievementView.swift */,
+			);
+			path = DetailAchievement;
+			sourceTree = "<group>";
+		};
 		78EA9A53266A966B00B9D92A = {
 			isa = PBXGroup;
 			children = (
@@ -217,9 +234,12 @@
 		78EA9A84266AA49300B9D92A /* Achievement */ = {
 			isa = PBXGroup;
 			children = (
+				78C368B62677A20000F82E00 /* DetailAchievement */,
 				78C368AD2677A0FB00F82E00 /* AchievementCell */,
 				78EA9A7F266AA36B00B9D92A /* Achievement.storyboard */,
 				78EA9A76266AA0C000B9D92A /* AchievementController.swift */,
+				78C368B22677A1BD00F82E00 /* AchievementView.swift */,
+				78C368B42677A1EA00F82E00 /* AchievementViewController + TVDataSource + TVDelegate.swift */,
 			);
 			path = Achievement;
 			sourceTree = "<group>";
@@ -347,14 +367,18 @@
 				780E31CC2671338A005D56B5 /* CongratsPopUpController.swift in Sources */,
 				780E31CE26713407005D56B5 /* CongratsPopUpView.swift in Sources */,
 				78EA9A64266A966B00B9D92A /* CompositionController.swift in Sources */,
+				78C368B82677A22900F82E00 /* DetailAchievementController.swift in Sources */,
 				78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */,
 				780E3184266DF485005D56B5 /* CongratulationController.swift in Sources */,
+				78C368BA2677A24D00F82E00 /* DetailAchievementView.swift in Sources */,
 				78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */,
+				78C368B52677A1EA00F82E00 /* AchievementViewController + TVDataSource + TVDelegate.swift in Sources */,
 				C7BEFF762671255600344E6C /* DetailCompositionView.swift in Sources */,
 				C7D1DA77266E754600ECC7E8 /* InstructionTableViewCell.swift in Sources */,
 				780E3169266D3BCC005D56B5 /* CameraController.swift in Sources */,
 				780E31CA26712BEF005D56B5 /* CongratulationView.swift in Sources */,
 				78EA9A78266AA0C000B9D92A /* AchievementController.swift in Sources */,
+				78C368B32677A1BD00F82E00 /* AchievementView.swift in Sources */,
 				780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */,
 				78C368B02677A12000F82E00 /* AchievementCell.swift in Sources */,
 				78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */,

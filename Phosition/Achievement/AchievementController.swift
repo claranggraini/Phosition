@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import CoreData
+class AchievementController: UIViewController{
 
-class AchievementController: UIViewController {
-
+    @IBOutlet var achievementView: AchievementView!
+    
+    let achievements = Database.shared.getAchievements()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) {
@@ -20,13 +24,21 @@ class AchievementController: UIViewController {
             navBarAppearance.backgroundColor = UIColor(named: "Blue")
             self.navigationController!.navigationBar.standardAppearance = navBarAppearance
             self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
+            achievementView.setup()
+            achievementView.achievementCV.delegate = self
+            achievementView.achievementCV.dataSource = self
+            
         }
+        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.items![1].badgeValue = nil
+    }
+    
+    
 
     @IBAction func unwind(_ segue: UIStoryboardSegue){
-        DispatchQueue.main.async {
-            self.viewDidLoad()
-        }
+        
     }
    
 }
