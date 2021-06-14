@@ -9,18 +9,15 @@ import UIKit
 
 class DetailCompositionController: UIViewController {
     
-    var selectedComposition: String = "Rule of Space"
+    var selectedComposition: String?
+    var cameraSegue: String?
     
     @IBOutlet var detailCompositionView: DetailCompositionView!
 
     lazy var compositions = Database.shared.getCompositions()
     lazy var instructions = Database.shared.getInstructions(from: compositions[0])
+
     
-    var newCompositions: [Any]?
-    var newInstructions: [Any]?
-    
-    var selectedIndex = 0
- 
     //MARK: -ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,17 +30,12 @@ class DetailCompositionController: UIViewController {
             
             detailCompositionView?.setup()
             detailCompositionView?.detailCompositionTableView.dataSource = self
-            print("Hoho")
-            
-            selectComposition()
-            print("Controller: Selected index is \(selectComposition())")
-            
             selectInstruction()
-            
         }
     }
 }
 
+//MARK: -Passing Data Logic
 extension DetailCompositionController {
     func selectComposition() -> Int{
         let composition = selectedComposition
@@ -71,7 +63,5 @@ extension DetailCompositionController {
         } else {
             instructions = Database.shared.getInstructions(from: compositions[3])
         }
-        
-        print(instructions)
     }
 }

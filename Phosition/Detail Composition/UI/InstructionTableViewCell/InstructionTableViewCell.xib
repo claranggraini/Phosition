@@ -3,13 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Raleway-VariableFont_wght.ttf">
-            <string>RalewayRoman-Bold</string>
-            <string>RalewayRoman-Regular</string>
+            <string>RalewayRoman-Medium</string>
+            <string>RalewayRoman-SemiBold</string>
         </array>
     </customFonts>
     <objects>
@@ -23,31 +24,32 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGA-el-xaN">
-                        <rect key="frame" x="20" y="217" width="280" height="20"/>
-                        <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="17"/>
+                        <rect key="frame" x="20" y="203.5" width="280" height="19"/>
+                        <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an object that you want to take a picture of." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uJ-hb-D9w">
-                        <rect key="frame" x="20" y="247" width="280" height="33"/>
-                        <fontDescription key="fontDescription" name="RalewayRoman-Regular" family="Raleway" pointSize="14"/>
+                        <rect key="frame" x="20" y="242.5" width="280" height="37.5"/>
+                        <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jy4-Kz-jvC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="207"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="183.5"/>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" name="Cream"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="IGA-el-xaN" secondAttribute="trailing" constant="20" id="8L5-UW-eL4"/>
                     <constraint firstItem="jy4-Kz-jvC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VQl-ps-N3W"/>
                     <constraint firstAttribute="trailing" secondItem="9uJ-hb-D9w" secondAttribute="trailing" constant="20" id="YOF-z7-LpP"/>
-                    <constraint firstItem="9uJ-hb-D9w" firstAttribute="top" secondItem="IGA-el-xaN" secondAttribute="bottom" constant="10" id="k3w-0R-rqy"/>
+                    <constraint firstItem="9uJ-hb-D9w" firstAttribute="top" secondItem="IGA-el-xaN" secondAttribute="bottom" constant="20" id="k3w-0R-rqy"/>
                     <constraint firstAttribute="bottom" secondItem="9uJ-hb-D9w" secondAttribute="bottom" constant="20" id="kxd-4J-501"/>
                     <constraint firstItem="IGA-el-xaN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="n3r-1o-xpm"/>
                     <constraint firstAttribute="trailing" secondItem="jy4-Kz-jvC" secondAttribute="trailing" id="nFT-2A-n1v"/>
                     <constraint firstItem="jy4-Kz-jvC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vwq-vz-eRG"/>
-                    <constraint firstItem="IGA-el-xaN" firstAttribute="top" secondItem="jy4-Kz-jvC" secondAttribute="bottom" constant="10" id="xNJ-QV-ZE8"/>
+                    <constraint firstItem="IGA-el-xaN" firstAttribute="top" secondItem="jy4-Kz-jvC" secondAttribute="bottom" constant="20" id="xNJ-QV-ZE8"/>
                     <constraint firstItem="9uJ-hb-D9w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="yHJ-26-e1Y"/>
                 </constraints>
             </tableViewCellContentView>
@@ -60,4 +62,9 @@
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="Cream">
+            <color red="0.93300002813339233" green="0.9179999828338623" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
