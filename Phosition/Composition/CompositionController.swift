@@ -51,13 +51,13 @@ extension CompositionController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: compCollectionViewCellId, for: indexPath) as! CompCollectionViewCell
-        guard var unwrapImage = compositions[indexPath.row].image else {return cell}
-        guard var unwrapTitle = compositions[indexPath.row].title else {return cell}
-        guard var unwrapSubs = compositions[indexPath.row].subtitle else {return cell}
+        guard let unwrapImage = compositions[indexPath.row].image else {return cell}
+        guard let unwrapTitle = compositions[indexPath.row].title else {return cell}
+        guard let unwrapSubs = compositions[indexPath.row].subtitle else {return cell}
         
-        let image  = unwrapImage
-        let title = unwrapTitle
-        let subs = unwrapSubs
+        cell.compImage.image =  UIImage(named: unwrapImage)
+        cell.compTitle.text = unwrapTitle
+        cell.compDesc.text = unwrapSubs
         
         return cell
     }
