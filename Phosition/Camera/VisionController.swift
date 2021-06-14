@@ -59,12 +59,15 @@ class VisionController: CameraController {
                 let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
                 
                 let shapeLayer = self.createRoundedRectLayerWithBounds(objectBounds)
+//                let testLayer = self.testShapeLayer(objectBounds)
                 
                 let textLayer = self.createTextSubLayerInBounds(objectBounds,
                                                                 identifier: topLabelObservation.identifier,
                                                                 confidence: topLabelObservation.confidence)
                 shapeLayer.addSublayer(textLayer)
+                
                 detectionOverlay.addSublayer(shapeLayer)
+//                detectionOverlay.addSublayer(testLayer)
                 found = true
             }
         }
@@ -87,7 +90,7 @@ class VisionController: CameraController {
         }
         
         if !takePicture {
-            return //we have nothing to do with the image buffer
+            return
         }
         
         //get a CIImage out of the CVImageBuffer
@@ -185,12 +188,15 @@ class VisionController: CameraController {
 //        print(bounds.midX)
 //        print(bounds.midY)
         let screenRect: CGRect = previewView.frame
-        let position1 = screenRect.height*2/3 + screenRect.minY - 20
-        let position2 = screenRect.height/3 + screenRect.minY - 20
-        print(screenRect.height*2/3 + screenRect.minY)
-//        print(bounds.minX)
-//        print(bounds.maxX)
-//        print(screenRect.height)
+        let position1 = screenRect.height*2/3 - screenRect.minY + 10
+        let position2 = position1*2
+        
+        print("position1: \(position1)")
+        print("position2: \(position2)")
+        print("jarak: \(screenRect.height/3)")
+        print(bounds.minX)
+        print(bounds.maxX)
+        print(screenRect.minY)
 //        print(bounds.midX)
 //        print(bounds.midY)
 //        print(bounds.midY - screenRect.width/3)
@@ -206,6 +212,17 @@ class VisionController: CameraController {
         }
         shapeLayer.cornerRadius = 7
         return shapeLayer
+    }
+    
+    func testShapeLayer(_ bounds: CGRect) -> CALayer {
+        
+        let testShape = CALayer()
+        testShape.bounds = bounds
+        testShape.position = CGPoint(x: previewView.frame.maxX, y: previewView.frame.maxY)
+        
+        testShape.backgroundColor = UIColor.blue.cgColor
+        
+        return testShape
     }
     
 }

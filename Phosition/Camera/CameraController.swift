@@ -114,8 +114,10 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         rootLayer = previewView.layer
+//        rootLayer.backgroundColor = UIColor.gray.cgColor
         previewLayer.frame = rootLayer.bounds
         rootLayer.addSublayer(previewLayer)
+//        previewLayer.backgroundColor = UIColor.white.cgColor
     }
     
     func startCaptureSession() {
