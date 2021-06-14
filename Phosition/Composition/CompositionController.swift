@@ -10,9 +10,10 @@ import CoreData
 
 class CompositionController: UIViewController {
     
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    let compCollectionViewCellId = "CompCollectionViewCell"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -25,6 +26,17 @@ class CompositionController: UIViewController {
             self.navigationController!.navigationBar.standardAppearance = navBarAppearance
             self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
         }
+        
+        //register cell
+        let nibCell = UINib(nibName: compCollectionViewCellId, bundle: nil)
+        collectionView.register(nibCell, forCellWithReuseIdentifier: compCollectionViewCellId)
+        
     }
+}
+
+extension CompositionController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
+    
 }
 
