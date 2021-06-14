@@ -59,7 +59,20 @@ extension CompositionController: UICollectionViewDelegate, UICollectionViewDataS
         cell.compTitle.text = unwrapTitle
         cell.compDesc.text = unwrapSubs
         
+        cell.layer.masksToBounds = false
+        cell.layer.shadowRadius = 3
+        cell.layer.shadowOpacity = 0.4
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 4, height: 4)
         return cell
+    }
+    
+    func centerItemsInCollectionView(cellWidth: Double, numberOfItems: Double, spaceBetweenCell: Double, collectionView: UICollectionView) -> UIEdgeInsets {
+        let totalWidth = cellWidth * numberOfItems
+        let totalSpacingWidth = spaceBetweenCell * (numberOfItems - 1)
+        let leftInset = (collectionView.frame.width - CGFloat(totalWidth + totalSpacingWidth)) / 2
+        let rightInset = leftInset
+        return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
     }
     
 }

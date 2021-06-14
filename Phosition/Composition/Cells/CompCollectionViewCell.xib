@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -30,36 +29,43 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gnG-yU-zOi">
                                 <rect key="frame" x="0.0" y="0.0" width="325" height="447"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mu6-aa-L0h">
-                                <rect key="frame" x="23" y="328" width="278" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mu6-aa-L0h">
+                                <rect key="frame" x="23" y="312" width="78.5" height="38"/>
                                 <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="32"/>
                                 <color key="textColor" name="Cream"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMO-cR-bJv">
-                                <rect key="frame" x="23" y="368" width="278" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMO-cR-bJv">
+                                <rect key="frame" x="23" y="350" width="39.5" height="19"/>
                                 <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="16"/>
                                 <color key="textColor" name="Cream"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAz-hD-ThX">
-                                <rect key="frame" x="22" y="396" width="110" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAz-hD-ThX">
+                                <rect key="frame" x="23" y="389" width="127" height="35"/>
                                 <color key="backgroundColor" name="Yellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="FlQ-7N-03k"/>
+                                    <constraint firstAttribute="height" constant="35" id="mRN-zv-jfa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="14"/>
                                 <state key="normal" title="Start Lesson">
                                     <color key="titleColor" name="Blue"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Mu6-aa-L0h" firstAttribute="leading" secondItem="e6s-zf-eVf" secondAttribute="leading" constant="23" id="Ioh-rN-hgz"/>
                             <constraint firstItem="gnG-yU-zOi" firstAttribute="leading" secondItem="e6s-zf-eVf" secondAttribute="leading" id="LHP-Yq-Quh"/>
                             <constraint firstAttribute="trailing" secondItem="gnG-yU-zOi" secondAttribute="trailing" id="Mib-hK-9DP"/>
+                            <constraint firstItem="WMO-cR-bJv" firstAttribute="top" secondItem="Mu6-aa-L0h" secondAttribute="bottom" id="XhX-An-nd2"/>
+                            <constraint firstAttribute="bottom" secondItem="yAz-hD-ThX" secondAttribute="bottom" constant="23" id="ZEL-pc-kHg"/>
+                            <constraint firstItem="yAz-hD-ThX" firstAttribute="leading" secondItem="e6s-zf-eVf" secondAttribute="leading" constant="23" id="bCk-lF-FIH"/>
+                            <constraint firstItem="WMO-cR-bJv" firstAttribute="leading" secondItem="e6s-zf-eVf" secondAttribute="leading" constant="23" id="cOn-lo-eU7"/>
                             <constraint firstItem="gnG-yU-zOi" firstAttribute="top" secondItem="e6s-zf-eVf" secondAttribute="top" id="gd9-lE-IF5"/>
                             <constraint firstAttribute="bottom" secondItem="gnG-yU-zOi" secondAttribute="bottom" id="pXE-Jc-1Wv"/>
+                            <constraint firstItem="yAz-hD-ThX" firstAttribute="top" secondItem="WMO-cR-bJv" secondAttribute="bottom" constant="20" id="qP1-dZ-lIK"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -76,6 +82,7 @@
                 <outlet property="compDesc" destination="WMO-cR-bJv" id="UoL-pS-4vM"/>
                 <outlet property="compImage" destination="gnG-yU-zOi" id="qRy-2y-Eza"/>
                 <outlet property="compTitle" destination="Mu6-aa-L0h" id="dPE-4N-rii"/>
+                <outlet property="compView" destination="e6s-zf-eVf" id="U2U-5Z-g4f"/>
                 <outlet property="startButton" destination="yAz-hD-ThX" id="Gdj-j6-xCA"/>
             </connections>
             <point key="canvasLocation" x="141.30434782608697" y="207.25446428571428"/>
@@ -91,8 +98,5 @@
         <namedColor name="Yellow">
             <color red="0.94499999284744263" green="0.81199997663497925" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
