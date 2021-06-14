@@ -13,6 +13,7 @@ class CompositionController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     let compCollectionViewCellId = "CompCollectionViewCell"
     
+    lazy var compositions = Database.shared.getCompositions()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ class CompositionController: UIViewController {
 extension CompositionController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return compositions.count
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let inset:CGFloat = 10
@@ -46,8 +47,15 @@ extension CompositionController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: compCollectionViewCellId, for: indexPath) as! CompCollectionViewCell
+        guard var unwrapImage = compositions[indexPath.row].image else {return cell}
+        guard var unwrapTitle = compositions[indexPath.row].title else {return cell}
+        guard var unwrapSubs = compositions[indexPath.row].subtitle else {return cell}
         
+        let image  = unwrapImage
+        let title = unwrapTitle
+        let subs = unwrapSubs
         
+        return cell
     }
     
 }
