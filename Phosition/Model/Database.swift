@@ -35,11 +35,12 @@ class Database{
     public func getInstructions(from composition: Composition)->[Instruction]{
                 
         if let ins = composition.instruction as? Set<Instruction> {
-                        
             for j in ins {
                 instructions.append(j)
             }
-                    
+            instructions = instructions.sorted{ itemA, itemB in
+                itemA.image! < itemB.image!
+            }
         }
        
         return instructions
