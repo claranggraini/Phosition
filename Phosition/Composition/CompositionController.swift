@@ -32,6 +32,10 @@ class CompositionController: UIViewController {
         let nibCell = UINib(nibName: compCollectionViewCellId, bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: compCollectionViewCellId)
         
+        //navbar image
+//        let img = UIImageView(frame: CGRect(x: 0, y: 0, width: 382, height: 108))
+//        img.image = UIImage(named: "Background Pattern")
+//        self.navigationItem.titleView = img
     }
 }
 

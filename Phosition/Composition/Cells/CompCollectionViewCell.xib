@@ -30,13 +30,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="325" height="447"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mu6-aa-L0h">
-                                <rect key="frame" x="23" y="312" width="78.5" height="38"/>
+                                <rect key="frame" x="23" y="312" width="87" height="38"/>
                                 <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="32"/>
                                 <color key="textColor" name="Cream"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMO-cR-bJv">
-                                <rect key="frame" x="23" y="350" width="39.5" height="19"/>
+                                <rect key="frame" x="23" y="350" width="43" height="19"/>
                                 <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="16"/>
                                 <color key="textColor" name="Cream"/>
                                 <nil key="highlightedColor"/>
