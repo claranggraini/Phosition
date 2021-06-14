@@ -9,17 +9,17 @@ import UIKit
 
 class DetailCompositionController: UIViewController {
     
-    var selectedComposition: String = "Rule of Thirds"
+    var selectedComposition: String = "Rule of Space"
     
     @IBOutlet var detailCompositionView: DetailCompositionView!
 
     lazy var compositions = Database.shared.getCompositions()
     lazy var instructions = Database.shared.getInstructions(from: compositions[0])
     
-    var stepNo = ["Step 1", "Step 2", "Step 3", "Step 4"]
+    var newCompositions: [Any]?
+    var newInstructions: [Any]?
     
     var selectedIndex = 0
-    var selectedInstruction:Int?
  
     //MARK: -ViewDidLoad
     override func viewDidLoad() {
@@ -35,8 +35,10 @@ class DetailCompositionController: UIViewController {
             detailCompositionView?.detailCompositionTableView.dataSource = self
             print("Hoho")
             
-            selectedIndex = selectComposition()
-            print("Controller: Selected index is \(selectedIndex)")
+            selectComposition()
+            print("Controller: Selected index is \(selectComposition())")
+            
+            selectInstruction()
             
         }
     }
@@ -57,4 +59,19 @@ extension DetailCompositionController {
         }
     }
     
+    func selectInstruction() {
+        let composition = selectedComposition
+        
+        if composition == "Rule of Thirds"{
+            instructions = Database.shared.getInstructions(from: compositions[0])
+        } else if composition == "Leading Lines"{
+            instructions = Database.shared.getInstructions(from: compositions[1])
+        } else if composition == "Rule of Space"{
+            instructions = Database.shared.getInstructions(from: compositions[2])
+        } else {
+            instructions = Database.shared.getInstructions(from: compositions[3])
+        }
+        
+        print(instructions)
+    }
 }

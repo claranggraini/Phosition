@@ -16,7 +16,7 @@ extension DetailCompositionController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 1
+            return compositions.count
         case 1:
             return instructions.count
         default:
@@ -28,25 +28,26 @@ extension DetailCompositionController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            let index = selectedIndex
+            let index = selectComposition()
             print("Controller: Description index is \(index)")
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
-            guard let headerImage = compositions[index].header_img else {return cell}
+            guard let headerImage = compositions[3].header_img else {return cell}
             cell.descriptionImage.image = UIImage(named: headerImage)
             
-            guard let desc = compositions[index].desc else {return cell}
+            guard let desc = compositions[3].desc else {return cell}
             cell.descriptionTextLabel.text = desc
             
             return cell
         case 1:
+            
             //TODO: -Masih Acak
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "instructionTableViewCell", for: indexPath) as! InstructionTableViewCell
             guard let instructionImage = instructions[indexPath.row].image else {return cell}
             cell.instructionImage.image = UIImage(named: instructionImage)
             
-            cell.instructionNumberLabel.text = stepNo[indexPath.row]
+            cell.instructionNumberLabel.text = "Step \(indexPath.row + 1)"
             
             guard let instructionDesc = instructions[indexPath.row].desc else {return cell}
             cell.instructionDescriptionLabel.text = instructionDesc
