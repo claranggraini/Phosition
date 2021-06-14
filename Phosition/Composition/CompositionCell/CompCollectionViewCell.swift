@@ -9,13 +9,19 @@ import UIKit
 
 class CompCollectionViewCell: UICollectionViewCell {
 
+    @IBAction func startLessonTapped(_ sender: Any) {
+        startLesson?()
+    }
+    var startLesson : (()->())?
+    
+    @IBOutlet weak var compView: UIView!
     @IBOutlet weak var compImage: UIImageView!
     @IBOutlet weak var compTitle: UILabel!
     @IBOutlet weak var compDesc: UILabel!
     @IBOutlet weak var startButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        startButton.layer.cornerRadius = 18
     }
 
 }

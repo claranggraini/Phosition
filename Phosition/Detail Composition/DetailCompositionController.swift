@@ -16,7 +16,7 @@ class DetailCompositionController: UIViewController {
 
     lazy var compositions = Database.shared.getCompositions()
     lazy var instructions = Database.shared.getInstructions(from: compositions[0])
-
+    var navBarAppearance: UINavigationBarAppearance?
     
     //MARK: -ViewDidLoad
     override func viewDidLoad() {
@@ -27,11 +27,17 @@ class DetailCompositionController: UIViewController {
             navBarSetting.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!, .font: UIFont(name: "Raleway Thin Bold", size: 34)!]
             self.navigationController!.navigationBar.standardAppearance = navBarSetting
             self.title = selectedComposition
-            
-            detailCompositionView?.setup()
-            detailCompositionView?.detailCompositionTableView.dataSource = self
-            selectInstruction()
+            self.navigationController?.navigationBar.isTranslucent = false
+            navBarSetting.backgroundColor = .clear
+            navBarAppearance?.backgroundColor = .clear
+
         }
+        detailCompositionView?.setup()
+        detailCompositionView?.detailCompositionTableView.dataSource = self
+        selectInstruction()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
     }
 }
 

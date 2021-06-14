@@ -20,6 +20,8 @@
 		780E31CE26713407005D56B5 /* CongratsPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E31CD26713407005D56B5 /* CongratsPopUpView.swift */; };
 		78C368AB2677536900F82E00 /* CompCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368A92677536900F82E00 /* CompCollectionViewCell.swift */; };
 		78C368AC2677536900F82E00 /* CompCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C368AA2677536900F82E00 /* CompCollectionViewCell.xib */; };
+		78C368B02677A12000F82E00 /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368AE2677A12000F82E00 /* AchievementCell.swift */; };
+		78C368B12677A12000F82E00 /* AchievementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C368AF2677A12000F82E00 /* AchievementCell.xib */; };
 		78E42046266CD73F00CB943C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E42045266CD73F00CB943C /* Database.swift */; };
 		78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A5F266A966B00B9D92A /* AppDelegate.swift */; };
 		78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A61266A966B00B9D92A /* SceneDelegate.swift */; };
@@ -55,6 +57,8 @@
 		780E31CD26713407005D56B5 /* CongratsPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPopUpView.swift; sourceTree = "<group>"; };
 		78C368A92677536900F82E00 /* CompCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompCollectionViewCell.swift; sourceTree = "<group>"; };
 		78C368AA2677536900F82E00 /* CompCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompCollectionViewCell.xib; sourceTree = "<group>"; };
+		78C368AE2677A12000F82E00 /* AchievementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
+		78C368AF2677A12000F82E00 /* AchievementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementCell.xib; sourceTree = "<group>"; };
 		78E42045266CD73F00CB943C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		78EA9A5C266A966B00B9D92A /* Phosition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phosition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EA9A5F266A966B00B9D92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +168,15 @@
 			path = CompositionCell;
 			sourceTree = "<group>";
 		};
+		78C368AD2677A0FB00F82E00 /* AchievementCell */ = {
+			isa = PBXGroup;
+			children = (
+				78C368AE2677A12000F82E00 /* AchievementCell.swift */,
+				78C368AF2677A12000F82E00 /* AchievementCell.xib */,
+			);
+			path = AchievementCell;
+			sourceTree = "<group>";
+		};
 		78EA9A53266A966B00B9D92A = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 		78EA9A84266AA49300B9D92A /* Achievement */ = {
 			isa = PBXGroup;
 			children = (
+				78C368AD2677A0FB00F82E00 /* AchievementCell */,
 				78EA9A7F266AA36B00B9D92A /* Achievement.storyboard */,
 				78EA9A76266AA0C000B9D92A /* AchievementController.swift */,
 			);
@@ -309,6 +323,7 @@
 				780E3186266DF4AD005D56B5 /* Congratulation.storyboard in Resources */,
 				78C368AC2677536900F82E00 /* CompCollectionViewCell.xib in Resources */,
 				78EA9A6F266A966C00B9D92A /* LaunchScreen.storyboard in Resources */,
+				78C368B12677A12000F82E00 /* AchievementCell.xib in Resources */,
 				C7D1DA78266E754600ECC7E8 /* InstructionTableViewCell.xib in Resources */,
 				780E3176266D60A3005D56B5 /* Camera.storyboard in Resources */,
 				78EA9A6C266A966C00B9D92A /* Assets.xcassets in Resources */,
@@ -341,6 +356,7 @@
 				780E31CA26712BEF005D56B5 /* CongratulationView.swift in Sources */,
 				78EA9A78266AA0C000B9D92A /* AchievementController.swift in Sources */,
 				780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */,
+				78C368B02677A12000F82E00 /* AchievementCell.swift in Sources */,
 				78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */,
 				78E42046266CD73F00CB943C /* Database.swift in Sources */,
 				78EA9A6A266A966B00B9D92A /* Phosition.xcdatamodeld in Sources */,
