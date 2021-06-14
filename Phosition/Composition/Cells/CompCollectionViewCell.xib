@@ -11,7 +11,6 @@
     <customFonts key="customFonts">
         <array key="Raleway-VariableFont_wght.ttf">
             <string>RalewayRoman-Bold</string>
-            <string>RalewayRoman-Regular</string>
             <string>RalewayRoman-SemiBold</string>
         </array>
     </customFonts>
@@ -32,24 +31,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="325" height="447"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mu6-aa-L0h">
-                                <rect key="frame" x="8" y="328" width="87" height="38"/>
+                                <rect key="frame" x="23" y="328" width="278" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="32"/>
                                 <color key="textColor" name="Cream"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMO-cR-bJv">
-                                <rect key="frame" x="8" y="368" width="43" height="19"/>
+                                <rect key="frame" x="23" y="368" width="278" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="16"/>
                                 <color key="textColor" name="Cream"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAz-hD-ThX">
-                                <rect key="frame" x="13" y="397" width="81" height="29"/>
+                                <rect key="frame" x="22" y="396" width="110" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Cream"/>
-                                <fontDescription key="fontDescription" name="RalewayRoman-Regular" family="Raleway" pointSize="14"/>
+                                <color key="backgroundColor" name="Yellow"/>
+                                <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="14"/>
                                 <state key="normal" title="Start Lesson">
                                     <color key="titleColor" name="Blue"/>
                                 </state>
@@ -79,7 +78,7 @@
                 <outlet property="compTitle" destination="Mu6-aa-L0h" id="dPE-4N-rii"/>
                 <outlet property="startButton" destination="yAz-hD-ThX" id="Gdj-j6-xCA"/>
             </connections>
-            <point key="canvasLocation" x="141.30434782608697" y="207.58928571428569"/>
+            <point key="canvasLocation" x="141.30434782608697" y="207.25446428571428"/>
         </collectionViewCell>
     </objects>
     <resources>
@@ -88,6 +87,9 @@
         </namedColor>
         <namedColor name="Cream">
             <color red="0.93300002813339233" green="0.9179999828338623" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Yellow">
+            <color red="0.94499999284744263" green="0.81199997663497925" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

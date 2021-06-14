@@ -45,6 +45,10 @@ extension CompositionController: UICollectionViewDelegate, UICollectionViewDataS
         return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 325, height: 447)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: compCollectionViewCellId, for: indexPath) as! CompCollectionViewCell
         guard var unwrapImage = compositions[indexPath.row].image else {return cell}
