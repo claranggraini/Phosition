@@ -24,6 +24,7 @@ class CompositionController: UIViewController {
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!, .font: UIFont(name: "Raleway Thin Bold", size: 34)!]
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
             navBarAppearance.backgroundColor = UIColor(named: "Blue")
+            navBarAppearance.backgroundImage = UIImage(named: "backpattern")
             self.navigationController!.navigationBar.standardAppearance = navBarAppearance
             self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
         }
@@ -31,11 +32,6 @@ class CompositionController: UIViewController {
         //register cell
         let nibCell = UINib(nibName: compCollectionViewCellId, bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: compCollectionViewCellId)
-        
-        //navbar image
-//        let img = UIImageView(frame: CGRect(x: 0, y: 0, width: 382, height: 108))
-//        img.image = UIImage(named: "Background Pattern")
-//        self.navigationItem.titleView = img
     }
 }
 
