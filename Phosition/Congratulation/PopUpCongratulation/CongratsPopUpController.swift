@@ -24,6 +24,9 @@ class CongratsPopUpController: UIViewController {
         super.viewDidLoad()
 
         congratsPopUpView.setup()
+        if congratsVC?.selCompTitle == "Golden Ratio"{
+            congratsPopUpView.nextCourseBtn.setTitle("Back to Course", for: .normal)
+        }
         congratsPopUpView.congratsIV.image = UIImage.animatedImage(with: images, duration: 2)
         congratsPopUpView.congratsDescLbl.text = congratsMsg
     }
