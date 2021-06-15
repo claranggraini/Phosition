@@ -99,7 +99,6 @@ class CongratulationController: UIViewController {
             
         }
         let unseenAchCount = defaults.integer(forKey: "notifCount")
-        
         var totalAch = achCount+unseenAchCount
         
         defaults.set(totalAch, forKey: "notifCount")

@@ -42,7 +42,7 @@ class AchievementController: UIViewController, UITabBarControllerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.items![1].badgeValue = nil
         let defaults = UserDefaults.standard
-        defaults.set(0, forKey: "notifsCount")
+        defaults.set(0, forKey: "notifCount")
         
     }
     
