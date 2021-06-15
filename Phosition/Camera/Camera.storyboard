@@ -71,9 +71,11 @@
                         <outlet property="photoButton" destination="2M7-2y-774" id="qza-vh-IUo"/>
                         <outlet property="previewView" destination="GTP-3R-fUb" id="Icb-IW-226"/>
                         <segue destination="yPa-MX-A7R" kind="show" identifier="congratsSegue" id="gHJ-Mi-nvW"/>
+                        <segue destination="o89-cR-Lw9" kind="unwind" identifier="unwindToCamera" unwindAction="unwindCamera:" id="Cj4-VN-svv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgL-hV-PS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="o89-cR-Lw9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2892.3076923076924" y="191.23222748815164"/>
         </scene>

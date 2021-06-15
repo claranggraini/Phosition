@@ -69,9 +69,11 @@
                     <connections>
                         <outlet property="congratulationView" destination="5EZ-qb-Rvc" id="GpI-k0-SeX"/>
                         <segue destination="Vk5-RU-ewE" kind="presentation" identifier="congratsPopUpSegue" modalPresentationStyle="overFullScreen" id="UWs-9R-C4B"/>
+                        <segue destination="tNX-GF-tox" kind="unwind" identifier="unwindToCamera" unwindAction="unwindCamera:" id="jGx-6I-XVV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="tNX-GF-tox" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="16" y="54"/>
         </scene>

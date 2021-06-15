@@ -27,6 +27,7 @@ class CongratulationController: UIViewController {
     @IBOutlet var congratulationView: CongratulationView!
     
     @IBAction func retakePhoto(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindToCamera", sender: self)
     }
     
     @IBAction func usePhoto(_ sender: UIButton) {
