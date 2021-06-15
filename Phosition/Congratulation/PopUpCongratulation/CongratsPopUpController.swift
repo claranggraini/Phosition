@@ -11,13 +11,12 @@ class CongratsPopUpController: UIViewController {
 
     @IBOutlet weak var congratsPopUpView: CongratsPopUpView!
     @IBAction func nextCourse(_ sender: UIButton) {
-        performSegue(withIdentifier: "nextCourseSegue", sender: self)
+        performSegue(withIdentifier: "unwindToDetailComp", sender: self)
     }
     var congratsVC: CongratulationController?
     var congratsMsg = ""
     @IBAction func goToAchievement(_ sender: UIButton) {
        performSegue(withIdentifier: "unwindToAch", sender: self)
-        print("Segue")
     }
     private var images: [UIImage] = []
     
@@ -28,4 +27,5 @@ class CongratsPopUpController: UIViewController {
         congratsPopUpView.congratsIV.image = UIImage.animatedImage(with: images, duration: 2)
         congratsPopUpView.congratsDescLbl.text = congratsMsg
     }
+    
 }

@@ -31,7 +31,6 @@ extension DetailCompositionController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
             guard let headerImage = compositions[index].header_img else {return cell}
             cell.descriptionImage.image = UIImage(named: headerImage)
-            
             guard let desc = compositions[index].desc else {return cell}
             cell.descriptionTextLabel.text = desc
             
@@ -51,14 +50,16 @@ extension DetailCompositionController: UITableViewDataSource {
     }
     
     @IBAction func button_clicked(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "cameraSegue", sender: self)
+        self.performSegue(withIdentifier: "congratsSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "cameraSegue" {
-            if let destination = segue.destination as? CameraController {
-                //TODO: Masukin Variable dari CameraController
-                //destination.composition = selectedComposition ?? "Rule of Thirds"
+        if segue.identifier == "congratsSegue" {
+            if let destination = segue.destination as? CongratulationController {
+//                TODO: Masukin Variable dari CameraController
+//                destination.composition = selectedComposition ?? "Rule of Thirds"
+                destination.selCompTitle = selectedComposition ?? "Rule of Thirds"
+                destination.tabController = self.tabBarController
             }
         }
     }

@@ -33,7 +33,7 @@ class Database{
     }
     
     public func getInstructions(from composition: Composition)->[Instruction]{
-                
+        instructions.removeAll()
         if let ins = composition.instruction as? Set<Instruction> {
             for j in ins {
                 instructions.append(j)
@@ -62,5 +62,21 @@ class Database{
         }catch{
             
         }
+    }
+    
+    public func getNextCompTitle(comp_name: String)->String{
+        compositions = getCompositions()
+        var index = 0
+        for comp in compositions{
+            if comp.title == "Golden Ratio"{
+                return "Golden Ratio"
+            }else if comp.title == comp_name{
+                guard let unwrappedCompTitle = compositions[index+1].title else {return ""}
+                return unwrappedCompTitle
+            }
+            
+            index+=1
+        }
+        return ""
     }
 }

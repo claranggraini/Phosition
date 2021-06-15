@@ -10,12 +10,12 @@ import UIKit
 class DetailCompositionController: UIViewController {
     
     var selectedComposition: String?
-    var cameraSegue: String?
+//    var cameraSegue: String?
     
     @IBOutlet var detailCompositionView: DetailCompositionView!
 
     lazy var compositions = Database.shared.getCompositions()
-    lazy var instructions = Database.shared.getInstructions(from: compositions[0])
+    var instructions: [Instruction] = []
     var navBarAppearance: UINavigationBarAppearance?
     
     //MARK: -ViewDidLoad
@@ -26,18 +26,24 @@ class DetailCompositionController: UIViewController {
             let navBarSetting = UINavigationBarAppearance()
             navBarSetting.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!, .font: UIFont(name: "Raleway Thin Bold", size: 34)!]
             self.navigationController!.navigationBar.standardAppearance = navBarSetting
-            self.title = selectedComposition
+            
             self.navigationController?.navigationBar.isTranslucent = false
             navBarSetting.backgroundColor = .clear
             navBarAppearance?.backgroundColor = .clear
-
+            detailCompositionView?.setup()
+            detailCompositionView?.detailCompositionTableView.dataSource = self
         }
-        detailCompositionView?.setup()
-        detailCompositionView?.detailCompositionTableView.dataSource = self
-        selectInstruction()
+        
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.title = selectedComposition
+        selectInstruction()
+        self.detailCompositionView.detailCompositionTableView.reloadData()
+        
+    }
+    @IBAction func unwindDetail(_ segue: UIStoryboardSegue){
+        selectedComposition! = Database.shared.getNextCompTitle(comp_name: selectedComposition!)
     }
 }
 
@@ -59,7 +65,6 @@ extension DetailCompositionController {
     
     func selectInstruction() {
         let composition = selectedComposition
-        
         if composition == "Rule of Thirds"{
             instructions = Database.shared.getInstructions(from: compositions[0])
         } else if composition == "Leading Lines"{

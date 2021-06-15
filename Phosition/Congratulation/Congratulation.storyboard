@@ -169,24 +169,14 @@
                     <navigationItem key="navigationItem" id="acQ-FI-4a2"/>
                     <connections>
                         <outlet property="congratsPopUpView" destination="E14-r2-KgN" id="oeG-Kv-wDr"/>
-                        <segue destination="cbU-AO-bY4" kind="show" identifier="nextCourseSegue" id="zQJ-Ef-gSG"/>
                         <segue destination="0eL-AS-2SE" kind="unwind" identifier="unwindToAch" unwindAction="unwind:" id="djW-V7-c7G"/>
+                        <segue destination="0eL-AS-2SE" kind="unwind" identifier="unwindToDetailComp" unwindAction="unwindDetail:" id="QQl-JL-Hdt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EH-3d-gGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0eL-AS-2SE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="870.76923076923072" y="53.317535545023695"/>
-        </scene>
-        <!--Detail Composition-->
-        <scene sceneID="huE-BI-9YP">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Detail Composition" id="cbU-AO-bY4" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="r6P-zN-RgS"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ba2-SJ-6KH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1513" y="167"/>
         </scene>
     </scenes>
     <resources>
