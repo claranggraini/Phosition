@@ -40,6 +40,7 @@
 		78EA9A8D266AAA2F00B9D92A /* Composition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A87266AAA2F00B9D92A /* Composition+CoreDataClass.swift */; };
 		78EA9A8F266AAA2F00B9D92A /* Instruction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */; };
 		78EA9A91266AAA2F00B9D92A /* Achievement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */; };
+		84EE998826785CBA00E57231 /* YOLOv3Tiny.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 84EE998726785CBA00E57231 /* YOLOv3Tiny.mlkitmodel */; };
 		C7BEFF762671255600344E6C /* DetailCompositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEFF752671255600344E6C /* DetailCompositionView.swift */; };
 		C7BEFF7B26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEFF7A26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift */; };
 		C7D1DA73266E751600ECC7E8 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */; };
@@ -84,6 +85,7 @@
 		78EA9A87266AAA2F00B9D92A /* Composition+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Composition+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78EA9A89266AAA2F00B9D92A /* Instruction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instruction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78EA9A8B266AAA2F00B9D92A /* Achievement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84EE998726785CBA00E57231 /* YOLOv3Tiny.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlkitmodel; sourceTree = "<group>"; };
 		C7BEFF752671255600344E6C /* DetailCompositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCompositionView.swift; sourceTree = "<group>"; };
 		C7BEFF7A26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailCompositionDataSource+Delegate.swift"; sourceTree = "<group>"; };
 		C7D1DA71266E751600ECC7E8 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				780E3175266D60A3005D56B5 /* Camera.storyboard */,
 				780E3168266D3BCC005D56B5 /* CameraController.swift */,
 				78C368C72678490500F82E00 /* VisionController.swift */,
+				84EE998726785CBA00E57231 /* YOLOv3Tiny.mlkitmodel */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				78E42046266CD73F00CB943C /* Database.swift in Sources */,
 				78EA9A6A266A966B00B9D92A /* Phosition.xcdatamodeld in Sources */,
 				C7D1DA73266E751600ECC7E8 /* DescriptionTableViewCell.swift in Sources */,
+				84EE998826785CBA00E57231 /* YOLOv3Tiny.mlkitmodel in Sources */,
 				78C368AB2677536900F82E00 /* CompCollectionViewCell.swift in Sources */,
 				78EA9A91266AAA2F00B9D92A /* Achievement+CoreDataClass.swift in Sources */,
 				C7BEFF7B26712A1A00344E6C /* DetailCompositionDataSource+Delegate.swift in Sources */,
@@ -539,7 +543,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BJK86B698;
+				DEVELOPMENT_TEAM = H9X3B7ZFUK;
 				INFOPLIST_FILE = Phosition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -558,7 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BJK86B698;
+				DEVELOPMENT_TEAM = H9X3B7ZFUK;
 				INFOPLIST_FILE = Phosition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

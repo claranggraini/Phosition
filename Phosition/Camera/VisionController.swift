@@ -103,8 +103,8 @@ class VisionController: CameraController {
         capturedImage = uiImage
 //        print("CAPTURED IMAGE: \(capturedImage?.description)")
         DispatchQueue.main.async {
-            self.imageVieww.image = uiImage
             
+            self.session.stopRunning()
             self.performSegue(withIdentifier: "congratsSegue", sender: self)
         }
         
@@ -241,6 +241,6 @@ class VisionController: CameraController {
     }
     
     @IBAction func unwindCamera(_ segue: UIStoryboardSegue){
-        
+        session.startRunning()
     }
 }
