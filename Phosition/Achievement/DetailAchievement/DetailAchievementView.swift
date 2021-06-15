@@ -18,7 +18,12 @@ class DetailAchievementView: UIView {
     
     func setup(ach: Achievement){
  
-        detailAchIV.image = UIImage(named: ach.image!)
+        if ach.isUnlocked{
+            detailAchIV.image = UIImage(named: ach.image!)
+        }else{
+            detailAchIV.image = UIImage(named: "\(ach.image)-locked")
+        }
+        
         achTitleLbl.text = ach.title
         achDescLbl.text = ach.desc
         self.layer.cornerRadius = 20
