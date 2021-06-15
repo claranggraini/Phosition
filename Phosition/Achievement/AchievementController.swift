@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreData
-class AchievementController: UIViewController{
+class AchievementController: UIViewController, UITabBarControllerDelegate {
 
     @IBOutlet var achievementView: AchievementView!
     
@@ -27,10 +27,18 @@ class AchievementController: UIViewController{
             achievementView.setup()
             achievementView.achievementCV.delegate = self
             achievementView.achievementCV.dataSource = self
-            
+            self.tabBarController?.delegate = self
         }
         
     }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+            let tabBarIndex = tabBarController.selectedIndex
+            if tabBarIndex == 0 {
+               performSegue(withIdentifier: "unwindToDetail", sender: self)
+            }
+       }
+    
     override func viewDidAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.items![1].badgeValue = nil
         let defaults = UserDefaults.standard

@@ -85,6 +85,7 @@
                         <outlet property="achievementView" destination="6l1-eu-L9i" id="rEn-Oj-6QM"/>
                         <segue destination="O7N-Ec-jSn" kind="presentation" identifier="achDetailSegue" modalPresentationStyle="overFullScreen" id="Y8D-lf-e4a"/>
                         <segue destination="eTe-Md-faN" kind="unwind" identifier="unwindToAch" unwindAction="unwind:" id="4d2-LZ-UOE"/>
+                        <segue destination="eTe-Md-faN" kind="unwind" identifier="unwindToDetail" unwindAction="unwindDetail:" id="DrC-Re-efX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1KT-k5-e7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailCompositionController: UIViewController {
+class DetailCompositionController: UIViewController{
     
     var selectedComposition: String?
 //    var cameraSegue: String?
@@ -32,6 +32,7 @@ class DetailCompositionController: UIViewController {
             navBarAppearance?.backgroundColor = .clear
             detailCompositionView?.setup()
             detailCompositionView?.detailCompositionTableView.dataSource = self
+            
         }
         
     }

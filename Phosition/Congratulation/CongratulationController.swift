@@ -99,7 +99,19 @@ class CongratulationController: UIViewController {
             
         }
         let unseenAchCount = defaults.integer(forKey: "notifCount")
-        defaults.set(achCount+unseenAchCount, forKey: "notifCount")
-        tabController?.tabBar.items![1].badgeValue = String(achCount+unseenAchCount)
+        
+        var totalAch = achCount+unseenAchCount
+        
+        defaults.set(totalAch, forKey: "notifCount")
+        if totalAch == 5{
+            achievements[5].isUnlocked = true
+            achievements[6].isUnlocked = true
+        }
+        if achievements[6].isUnlocked{
+            totalAch = 0
+        }
+        if totalAch > 0 {
+            tabController?.tabBar.items![1].badgeValue = String(totalAch)
+        }
     }
 }
