@@ -96,13 +96,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7K2-uF-Xrw">
-                                        <rect key="frame" x="30" y="236" width="240" height="28"/>
+                                        <rect key="frame" x="30" y="228" width="240" height="28"/>
                                         <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="24"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-em-2wn">
-                                        <rect key="frame" x="30" y="272" width="240" height="60"/>
+                                        <rect key="frame" x="30" y="264" width="240" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="48U-gJ-Vyz"/>
                                         </constraints>
@@ -110,8 +110,8 @@
                                         <color key="textColor" name="Grey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XW-zU-hzZ">
-                                        <rect key="frame" x="51" y="394" width="198" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XW-zU-hzZ">
+                                        <rect key="frame" x="51" y="395" width="198" height="33"/>
                                         <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="18"/>
                                         <state key="normal" title="Go to Achievements">
                                             <color key="titleColor" name="Blue"/>
@@ -121,7 +121,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNk-Al-g2X">
-                                        <rect key="frame" x="30" y="352" width="240" height="34"/>
+                                        <rect key="frame" x="30" y="344" width="240" height="43"/>
                                         <color key="backgroundColor" name="Blue"/>
                                         <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="18"/>
                                         <state key="normal" title="Next Course">
@@ -147,7 +147,7 @@
                                     <constraint firstItem="2XW-zU-hzZ" firstAttribute="top" secondItem="pNk-Al-g2X" secondAttribute="bottom" constant="8" id="Z7V-Tr-PEZ"/>
                                     <constraint firstItem="wLg-W6-A3n" firstAttribute="top" secondItem="E14-r2-KgN" secondAttribute="top" constant="20" id="dU7-qy-GgR"/>
                                     <constraint firstAttribute="trailing" secondItem="2XW-zU-hzZ" secondAttribute="trailing" constant="51" id="fmb-rq-Pmv"/>
-                                    <constraint firstItem="7K2-uF-Xrw" firstAttribute="top" secondItem="wLg-W6-A3n" secondAttribute="bottom" constant="16" id="ojF-VH-iPG"/>
+                                    <constraint firstItem="7K2-uF-Xrw" firstAttribute="top" secondItem="wLg-W6-A3n" secondAttribute="bottom" constant="8" id="ojF-VH-iPG"/>
                                     <constraint firstItem="pbN-em-2wn" firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" id="uTD-zx-ZR4"/>
                                     <constraint firstItem="pNk-Al-g2X" firstAttribute="trailing" secondItem="wLg-W6-A3n" secondAttribute="trailing" id="yfb-6J-YNv"/>
                                 </constraints>

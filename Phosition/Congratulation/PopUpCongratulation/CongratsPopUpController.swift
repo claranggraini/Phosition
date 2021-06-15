@@ -15,19 +15,27 @@ class CongratsPopUpController: UIViewController {
     }
     var congratsVC: CongratulationController?
     var congratsMsg = ""
+    let defaults = UserDefaults()
     @IBAction func goToAchievement(_ sender: UIButton) {
        performSegue(withIdentifier: "unwindToAch", sender: self)
     }
+    
     private var images: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if defaults.bool(forKey: "isAchieving") == true{
+            images = Database.shared.getCongratsAchImages()
+        }else{
+            images = Database.shared.getCongratsImages()
+        }
+        
         congratsPopUpView.setup()
         if congratsVC?.selCompTitle == "Golden Ratio"{
             congratsPopUpView.nextCourseBtn.setTitle("Back to Course", for: .normal)
         }
-        congratsPopUpView.congratsIV.image = UIImage.animatedImage(with: images, duration: 2)
+        congratsPopUpView.congratsIV.image = UIImage.animatedImage(with: images, duration: 1)
         congratsPopUpView.congratsDescLbl.text = congratsMsg
     }
     

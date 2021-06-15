@@ -67,7 +67,13 @@ class CongratulationController: UIViewController {
         
         validateAchievement()
         if achCount > 0{
+            defaults.bool(forKey: "isAchieving")
+            
+            defaults.setValue(true, forKey: "isAchieving")
+            
             return "You have unlocked \(achCount) achievement\nYour photo is saved in Photos"
+        }else{
+            defaults.setValue(false, forKey: "isAchieving")
         }
         return "You have sucessfully completed the task\nYour photo is saved in Photos"
     }
@@ -102,15 +108,28 @@ class CongratulationController: UIViewController {
         var totalAch = achCount+unseenAchCount
         
         defaults.set(totalAch, forKey: "notifCount")
-        if totalAch == 5{
+        if countUnlockedAchievement(){
             achievements[5].isUnlocked = true
             achievements[6].isUnlocked = true
+            totalAch+=2
         }
-        if achievements[6].isUnlocked{
+        if achievements[6].isUnlocked && unseenAchCount == 0{
             totalAch = 0
         }
         if totalAch > 0 {
             tabController?.tabBar.items![1].badgeValue = String(totalAch)
         }
+    }
+    func countUnlockedAchievement()->Bool{
+        var count = 0
+        for ach in achievements{
+            if ach.isUnlocked == true{
+                count+=1
+            }
+        }
+        if count == 5{
+            return true
+        }
+        return false
     }
 }
