@@ -95,7 +95,7 @@
                     <navigationItem key="navigationItem" title="Composition" id="SWq-ZX-b0G"/>
                     <connections>
                         <outlet property="detailCompositionView" destination="5EZ-qb-Rvc" id="EAj-f9-wkD"/>
-                        <segue destination="mss-hr-9xR" kind="show" identifier="congratsSegue" id="wZg-M4-Fne"/>
+                        <segue destination="mss-hr-9xR" kind="show" identifier="cameraSegue" id="wZg-M4-Fne"/>
                         <segue destination="hHU-9V-7Dh" kind="unwind" identifier="unwindToDetailComp" unwindAction="unwindDetail:" id="d2b-cY-GI8"/>
                     </connections>
                 </viewController>
@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="926.08695652173924" y="93.75"/>
         </scene>
-        <!--Congratulation-->
+        <!--Camera-->
         <scene sceneID="OO5-qH-Lw6">
             <objects>
-                <viewControllerPlaceholder storyboardName="Congratulation" id="mss-hr-9xR" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Camera" id="mss-hr-9xR" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rGf-By-14p"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePI-NU-25K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

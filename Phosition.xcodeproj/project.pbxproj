@@ -26,6 +26,7 @@
 		78C368B52677A1EA00F82E00 /* AchievementViewController + TVDataSource + TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368B42677A1EA00F82E00 /* AchievementViewController + TVDataSource + TVDelegate.swift */; };
 		78C368B82677A22900F82E00 /* DetailAchievementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368B72677A22900F82E00 /* DetailAchievementController.swift */; };
 		78C368BA2677A24D00F82E00 /* DetailAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368B92677A24D00F82E00 /* DetailAchievementView.swift */; };
+		78C368C82678490500F82E00 /* VisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C368C72678490500F82E00 /* VisionController.swift */; };
 		78E42046266CD73F00CB943C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E42045266CD73F00CB943C /* Database.swift */; };
 		78EA9A60266A966B00B9D92A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A5F266A966B00B9D92A /* AppDelegate.swift */; };
 		78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA9A61266A966B00B9D92A /* SceneDelegate.swift */; };
@@ -67,6 +68,7 @@
 		78C368B42677A1EA00F82E00 /* AchievementViewController + TVDataSource + TVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementViewController + TVDataSource + TVDelegate.swift"; sourceTree = "<group>"; };
 		78C368B72677A22900F82E00 /* DetailAchievementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAchievementController.swift; sourceTree = "<group>"; };
 		78C368B92677A24D00F82E00 /* DetailAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAchievementView.swift; sourceTree = "<group>"; };
+		78C368C72678490500F82E00 /* VisionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionController.swift; sourceTree = "<group>"; };
 		78E42045266CD73F00CB943C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		78EA9A5C266A966B00B9D92A /* Phosition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phosition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EA9A5F266A966B00B9D92A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				780E3175266D60A3005D56B5 /* Camera.storyboard */,
 				780E3168266D3BCC005D56B5 /* CameraController.swift */,
+				78C368C72678490500F82E00 /* VisionController.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				780E317F266DEE78005D56B5 /* DetailCompositionController.swift in Sources */,
 				78C368B02677A12000F82E00 /* AchievementCell.swift in Sources */,
 				78EA9A62266A966B00B9D92A /* SceneDelegate.swift in Sources */,
+				78C368C82678490500F82E00 /* VisionController.swift in Sources */,
 				78E42046266CD73F00CB943C /* Database.swift in Sources */,
 				78EA9A6A266A966B00B9D92A /* Phosition.xcdatamodeld in Sources */,
 				C7D1DA73266E751600ECC7E8 /* DescriptionTableViewCell.swift in Sources */,
@@ -535,7 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P3K73C69PR;
+				DEVELOPMENT_TEAM = 3BJK86B698;
 				INFOPLIST_FILE = Phosition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,7 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P3K73C69PR;
+				DEVELOPMENT_TEAM = 3BJK86B698;
 				INFOPLIST_FILE = Phosition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

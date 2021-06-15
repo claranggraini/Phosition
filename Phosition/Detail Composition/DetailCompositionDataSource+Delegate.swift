@@ -50,12 +50,13 @@ extension DetailCompositionController: UITableViewDataSource {
     }
     
     @IBAction func button_clicked(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "congratsSegue", sender: self)
+        self.navigationController?.navigationBar.isHidden = true
+        self.performSegue(withIdentifier: "cameraSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "congratsSegue" {
-            if let destination = segue.destination as? CongratulationController {
+        if segue.identifier == "cameraSegue" {
+            if let destination = segue.destination as? VisionController {
 //                TODO: Masukin Variable dari CameraController
 //                destination.composition = selectedComposition ?? "Rule of Thirds"
                 destination.selCompTitle = selectedComposition ?? "Rule of Thirds"

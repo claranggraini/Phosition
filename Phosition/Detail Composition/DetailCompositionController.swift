@@ -40,7 +40,7 @@ class DetailCompositionController: UIViewController {
         self.title = selectedComposition
         selectInstruction()
         self.detailCompositionView.detailCompositionTableView.reloadData()
-        
+        self.navigationController?.navigationBar.isHidden = false
     }
     @IBAction func unwindDetail(_ segue: UIStoryboardSegue){
         selectedComposition! = Database.shared.getNextCompTitle(comp_name: selectedComposition!)

@@ -17,6 +17,7 @@ enum compType: String{
 class CongratulationController: UIViewController {
     var selectedComp: Composition?
     var selCompTitle: String?
+    var capturedImg: UIImage?
     lazy var compositions = Database.shared.getCompositions()
     lazy var achievements = Database.shared.getAchievements()
     let defaults = UserDefaults.standard
@@ -42,7 +43,7 @@ class CongratulationController: UIViewController {
             achCount+=1
             achievements[4].isUnlocked = true
             Database.shared.updateDatabase()
-        
+            congratulationView.capturedImgIv.image = capturedImg
     }
     
     override func viewWillAppear(_ animated: Bool) {
