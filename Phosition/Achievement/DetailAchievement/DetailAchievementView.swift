@@ -21,7 +21,7 @@ class DetailAchievementView: UIView {
         if ach.isUnlocked{
             detailAchIV.image = UIImage(named: ach.image!)
         }else{
-            detailAchIV.image = UIImage(named: "\(ach.image)-locked")
+            detailAchIV.image = UIImage(named: "Achievement-locked")
         }
         
         achTitleLbl.text = ach.title

@@ -19,7 +19,7 @@ extension AchievementController: UICollectionViewDelegate, UICollectionViewDataS
         if achievements[indexPath.row].isUnlocked{
             cell.achievementIV.image = UIImage(named: achImageUnwrapped)
         }else{
-            cell.achievementIV.image = UIImage(named: "\(achImageUnwrapped)-locked")
+            cell.achievementIV.image = UIImage(named: "Achievement-locked")
         }
         
         return cell
