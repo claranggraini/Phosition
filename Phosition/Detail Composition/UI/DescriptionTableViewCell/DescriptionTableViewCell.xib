@@ -27,13 +27,13 @@
                         <rect key="frame" x="20" y="347" width="280" height="94"/>
                         <string key="text">The rule of thirds is an essential photography technique. It can be applied to any subject to improve the composition and balance of your images. </string>
                         <fontDescription key="fontDescription" name="RalewayRoman-SemiBold" family="Raleway" pointSize="16"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Instruction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30N-Ta-Aet">
                         <rect key="frame" x="20" y="471" width="280" height="28"/>
                         <fontDescription key="fontDescription" name="RalewayRoman-Bold" family="Raleway" pointSize="24"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="header-ROT" translatesAutoresizingMaskIntoConstraints="NO" id="AKw-Te-SMR">
