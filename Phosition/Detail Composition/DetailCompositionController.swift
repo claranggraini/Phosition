@@ -10,13 +10,11 @@ import UIKit
 class DetailCompositionController: UIViewController{
     
     var selectedComposition: String?
-//    var cameraSegue: String?
-    
+
     @IBOutlet var detailCompositionView: DetailCompositionView!
 
     lazy var compositions = Database.shared.getCompositions()
     var instructions: [Instruction] = []
-    var navBarAppearance: UINavigationBarAppearance?
     
     //MARK: -ViewDidLoad
     override func viewDidLoad() {
@@ -25,11 +23,11 @@ class DetailCompositionController: UIViewController{
         if #available(iOS 13.0, *) {
             let navBarSetting = UINavigationBarAppearance()
             navBarSetting.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!, .font: UIFont(name: "Raleway Thin Bold", size: 34)!]
+            
             self.navigationController!.navigationBar.standardAppearance = navBarSetting
             
             self.navigationController?.navigationBar.isTranslucent = false
-            navBarSetting.backgroundColor = .clear
-            navBarAppearance?.backgroundColor = .clear
+
             detailCompositionView?.setup()
             detailCompositionView?.detailCompositionTableView.dataSource = self
             
@@ -37,7 +35,6 @@ class DetailCompositionController: UIViewController{
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
         self.title = selectedComposition
         selectInstruction()
         self.detailCompositionView.detailCompositionTableView.reloadData()

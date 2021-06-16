@@ -14,19 +14,15 @@ class CompositionController: UIViewController {
     let compCollectionViewCellId = "CompCollectionViewCell"
     var selectedCellIndexPath: IndexPath?
     lazy var compositions = Database.shared.getCompositions()
-    
+    let navBarAppearance = UINavigationBarAppearance()
     override func viewDidLoad() {
         super.viewDidLoad()
                 
         if #available(iOS 13.0, *) {
-            let navBarAppearance = UINavigationBarAppearance()
+           
             navBarAppearance.configureWithOpaqueBackground()
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!, .font: UIFont(name: "Raleway Thin Bold", size: 34)!]
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-            navBarAppearance.backgroundColor = .clear
-            navBarAppearance.backgroundImage = UIImage(named: "backpattern")
-            self.navigationController!.navigationBar.standardAppearance = navBarAppearance
-            self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
         }
         
         //register cell
@@ -36,15 +32,20 @@ class CompositionController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "Blue")
+        navBarAppearance.backgroundColor = UIColor(named: "Blue")
+        navBarAppearance.backgroundImage = UIImage(named: "backpattern")
+        self.navigationController!.navigationBar.standardAppearance = navBarAppearance
+        self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailCompSegue"{
             let dest = segue.destination as! DetailCompositionController
-            dest.navBarAppearance = UINavigationBarAppearance()
-            self.navigationController?.navigationBar.backgroundColor = .clear
             dest.selectedComposition = compositions[selectedCellIndexPath!.row].title
+            navBarAppearance.backgroundImage = nil
+            navBarAppearance.backgroundColor = .clear
+            self.navigationController!.navigationBar.standardAppearance = navBarAppearance
+            self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
         }
     }
 }
