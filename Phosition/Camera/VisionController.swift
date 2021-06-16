@@ -134,11 +134,13 @@ class VisionController: CameraController {
         super.setupAVCapture()
         
         // setup Vision parts
-//        DispatchQueue.global(qos: .userInitiated).async {
+        if selCompTitle == "Leading Lines" {
+            
+        } else {
             self.setupLayers()
             self.updateLayerGeometry()
             self.setupVision()
-//        }
+        }
         
         // start the capture
         startCaptureSession()
@@ -200,32 +202,27 @@ class VisionController: CameraController {
         let shapeLayer = CALayer()
         shapeLayer.bounds = bounds
         shapeLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
-//        print(bounds.midX)
-//        print(bounds.midY)
-        let screenRect: CGRect = previewView.frame
-        let position1 = screenRect.height*2/3 - screenRect.minY + 10
-        let position2 = position1*2
+        let position1 = bufferSize.width/3
+        let position2 = bufferSize.width*2/3
+        let position3 = bufferSize.height/3
+        let position4 = bufferSize.height*2/3
         
-        print("position1: \(position1)")
-        print("position2: \(position2)")
-        print("jarak: \(screenRect.height/3)")
-        print(bounds.minX)
-        print(bounds.maxX)
-        print(screenRect.minY)
-//        print(bounds.midX)
-//        print(bounds.midY)
-//        print(bounds.midY - screenRect.width/3)
-//        print(bounds.midY - screenRect.width/3*2)
         shapeLayer.name = "Found Object"
-//        shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 0.2, 0.4])
-        if bounds.minX < position1 && bounds.maxX > position1 {
-            shapeLayer.backgroundColor = UIColor.green.withAlphaComponent(0.5).cgColor
-        } else if bounds.minX < position2 && bounds.maxX > position2 {
-            shapeLayer.backgroundColor = UIColor.green.withAlphaComponent(0.5).cgColor
+        if selCompTitle == "Rule of Thirds" {
+            if bounds.minX < position1 && bounds.maxX > position1 || bounds.minX < position2 && bounds.maxX > position2{
+                if bounds.minY < position3 && bounds.maxY > position3 || bounds.minY < position4 && bounds.maxY > position4 {
+                    shapeLayer.backgroundColor = UIColor.green.withAlphaComponent(0.5).cgColor
+                } else {
+                    shapeLayer.backgroundColor = UIColor.red.withAlphaComponent(0.5).cgColor
+                }
+            } else {
+                shapeLayer.backgroundColor = UIColor.red.withAlphaComponent(0.5).cgColor
+            }
+            shapeLayer.cornerRadius = 7
         } else {
-            shapeLayer.backgroundColor = UIColor.red.withAlphaComponent(0.5).cgColor
+            shapeLayer.backgroundColor = UIColor.green.withAlphaComponent(0.5).cgColor
         }
-        shapeLayer.cornerRadius = 7
+        
         return shapeLayer
     }
     

@@ -43,6 +43,9 @@ class DetailCompositionController: UIViewController{
     @IBAction func unwindDetail(_ segue: UIStoryboardSegue){
         selectedComposition! = Database.shared.getNextCompTitle(comp_name: selectedComposition!)
     }
+    @IBAction func unwindDetailfromCamera(_ segue: UIStoryboardSegue){
+        
+    }
 }
 
 //MARK: -Passing Data Logic
