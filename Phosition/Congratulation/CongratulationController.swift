@@ -111,6 +111,7 @@ class CongratulationController: UIViewController {
         if countUnlockedAchievement(){
             achievements[5].isUnlocked = true
             achievements[6].isUnlocked = true
+            achCount+=2
             totalAch+=2
         }
         if achievements[6].isUnlocked && unseenAchCount == 0{
