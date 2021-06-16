@@ -52,7 +52,7 @@
                             <constraint firstItem="GDi-9L-xcE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aTq-kE-NPd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Phosition" id="TnI-sA-bgw"/>
+                    <navigationItem key="navigationItem" title="Phosition" largeTitleDisplayMode="always" id="TnI-sA-bgw"/>
                     <connections>
                         <outlet property="collectionView" destination="GDi-9L-xcE" id="ckG-6Y-wDe"/>
                         <segue destination="1c2-ci-gdd" kind="show" identifier="detailCompSegue" id="JP9-Hm-tgR"/>

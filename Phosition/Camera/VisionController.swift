@@ -204,6 +204,7 @@ class VisionController: CameraController {
         let position3 = bufferSize.height/3
         let position4 = bufferSize.height*2/3
         
+        
         shapeLayer.name = "Found Object"
         if selCompTitle == "Rule of Thirds" {
             if bounds.minX < position1 && bounds.maxX > position1 || bounds.minX < position2 && bounds.maxX > position2{

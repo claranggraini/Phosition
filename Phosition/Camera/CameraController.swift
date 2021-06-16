@@ -60,6 +60,7 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
     }
     
     @IBAction func onTapCancel(_ sender: Any){
+        session.stopRunning()
         performSegue(withIdentifier: "unwindToDetail", sender: self)
     }
     
@@ -110,6 +111,10 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
             let dimensions = CMVideoFormatDescriptionGetDimensions((videoDevice?.activeFormat.formatDescription)!)
             bufferSize.width = CGFloat(dimensions.width)
             bufferSize.height = CGFloat(dimensions.height)
+            
+            print(bufferSize.width)
+            print(bufferSize.height)
+            
             videoDevice!.unlockForConfiguration()
         } catch {
             print(error)

@@ -17,7 +17,7 @@ class CompositionController: UIViewController {
     let navBarAppearance = UINavigationBarAppearance()
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         if #available(iOS 13.0, *) {
            
             navBarAppearance.configureWithOpaqueBackground()
@@ -36,6 +36,10 @@ class CompositionController: UIViewController {
         navBarAppearance.backgroundImage = UIImage(named: "backpattern")
         self.navigationController!.navigationBar.standardAppearance = navBarAppearance
         self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.sizeToFit()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
