@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension DetailCompositionController: UITableViewDataSource {
+extension DetailCompositionController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -64,4 +64,19 @@ extension DetailCompositionController: UITableViewDataSource {
             }
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y > 0) {
+            
+            let navBarSetting = UINavigationBarAppearance()
+            let color = UIColor.darkGray
+            navBarSetting.backgroundColor = color.withAlphaComponent(0.5)
+            
+            
+//            navBarSetting.titleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!, .font: UIFont(name: "Raleway Thin Bold", size: 16)!]
+            guard let unwrappedNavCon = self.navigationController else{return}
+            unwrappedNavCon.navigationBar.standardAppearance = navBarSetting
+        } 
+    }
 }
+

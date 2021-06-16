@@ -22,8 +22,9 @@ class CompositionController: UIViewController {
            
             navBarAppearance.configureWithOpaqueBackground()
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!, .font: UIFont(name: "Raleway Thin Bold", size: 34)!]
-            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!]
         }
+        
         
         //register cell
         let nibCell = UINib(nibName: compCollectionViewCellId, bundle: nil)
