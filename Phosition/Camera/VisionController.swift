@@ -61,7 +61,6 @@ class VisionController: CameraController {
                 let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
                 
                 let shapeLayer = self.createRoundedRectLayerWithBounds(objectBounds)
-//                let testLayer = self.testShapeLayer(objectBounds)
                 
                 let textLayer = self.createTextSubLayerInBounds(objectBounds,
                                                                 identifier: topLabelObservation.identifier,
@@ -69,7 +68,6 @@ class VisionController: CameraController {
                 shapeLayer.addSublayer(textLayer)
                 
                 detectionOverlay.addSublayer(shapeLayer)
-//                detectionOverlay.addSublayer(testLayer)
                 found = true
             }
         }
@@ -101,15 +99,12 @@ class VisionController: CameraController {
         //get UIImage out of CIImage
         let uiImage = UIImage(cgImage: cgImage)
         capturedImage = uiImage
-//        print("CAPTURED IMAGE: \(capturedImage?.description)")
+        
         DispatchQueue.main.async {
             
             self.session.stopRunning()
             self.performSegue(withIdentifier: "congratsSegue", sender: self)
         }
-        
-        
-//        UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
         
         print("ada foto")
         
