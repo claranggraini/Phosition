@@ -94,10 +94,12 @@ class VisionController: CameraController {
         }
         
         //get a CIImage out of the CVImageBuffer
+        
+        
         let ciImage = CIImage(cvImageBuffer: pixelBuffer)
         guard let cgImage = cgImage(from: ciImage) else { return }
         //get UIImage out of CIImage
-        let uiImage = UIImage(cgImage: cgImage)
+        let uiImage = UIImage(cgImage: cgImage, scale: 1, orientation: .right)
         capturedImage = uiImage
         
         DispatchQueue.main.async {

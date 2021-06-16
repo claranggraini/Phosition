@@ -21,7 +21,7 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
     @IBOutlet weak private var photoButton: UIButton!
     let session = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
-    private let videoDataOutput = AVCaptureVideoDataOutput()
+    let videoDataOutput = AVCaptureVideoDataOutput()
     
     private let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
@@ -101,6 +101,7 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
             session.commitConfiguration()
             return
         }
+        
         let captureConnection = videoDataOutput.connection(with: .video)
         // Always process the frames
         captureConnection?.isEnabled = true
