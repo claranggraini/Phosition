@@ -24,6 +24,9 @@ class CongratulationController: UIViewController {
     var achCount = 0
     var tabController: UITabBarController?
     
+    @IBAction func cancelSaveBtn(_ sender: Any) {
+        performSegue(withIdentifier: "congratsPopUpSegue", sender: self)
+    }
     @IBOutlet var congratulationView: CongratulationView!
     
     @IBAction func retakePhoto(_ sender: UIButton) {

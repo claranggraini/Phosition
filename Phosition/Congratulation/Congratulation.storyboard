@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GR" translatesAutoresizingMaskIntoConstraints="NO" id="ZX1-J5-CrR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZX1-J5-CrR">
                                 <rect key="frame" x="0.0" y="129" width="390" height="586"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-tG-6pg">
@@ -37,13 +37,24 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sx-33-oe4">
-                                <rect key="frame" x="283" y="752" width="87" height="34"/>
+                                <rect key="frame" x="275" y="752" width="95" height="34"/>
                                 <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="18"/>
-                                <state key="normal" title="Use Photo">
+                                <state key="normal" title="Save Photo">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="usePhoto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yWo-j4-Ih6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-WX-uK3">
+                                <rect key="frame" x="278" y="72" width="90" height="34"/>
+                                <fontDescription key="fontDescription" name="RalewayRoman-Medium" family="Raleway" pointSize="18"/>
+                                <state key="normal" title="Don't Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelSaveBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hTm-eo-bXW"/>
+                                    <action selector="usePhoto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Xps-jP-UKp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,11 +63,13 @@
                         <constraints>
                             <constraint firstItem="1ac-tG-6pg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="2iR-T8-b63"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1ac-tG-6pg" secondAttribute="bottom" constant="24" id="A12-vo-31M"/>
+                            <constraint firstItem="ZX1-J5-CrR" firstAttribute="top" secondItem="aR2-WX-uK3" secondAttribute="bottom" constant="23" id="A8I-VK-oCz"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2Sx-33-oe4" secondAttribute="trailing" constant="20" id="FeO-0w-tQR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZX1-J5-CrR" secondAttribute="trailing" id="KKy-5y-Htr"/>
                             <constraint firstItem="ZX1-J5-CrR" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="NX5-L6-ruB"/>
                             <constraint firstItem="ZX1-J5-CrR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="85" id="Uza-e0-4Uy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="2Sx-33-oe4" secondAttribute="bottom" constant="24" id="Xz8-ET-xnz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aR2-WX-uK3" secondAttribute="trailing" constant="22" id="ZYR-H4-cfH"/>
                             <constraint firstItem="1ac-tG-6pg" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" constant="-84" id="hFC-9y-dt9"/>
                             <constraint firstItem="ZX1-J5-CrR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zgc-8B-vhf"/>
                         </constraints>
@@ -75,7 +88,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="tNX-GF-tox" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="16" y="54"/>
+            <point key="canvasLocation" x="15.384615384615383" y="53.317535545023695"/>
         </scene>
         <!--Congrats Pop Up Controller-->
         <scene sceneID="VyB-yN-lvB">
@@ -182,7 +195,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GR" width="652" height="895"/>
         <image name="header-ROT" width="390" height="327"/>
         <namedColor name="Blue">
             <color red="0.11800000071525574" green="0.31400001049041748" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

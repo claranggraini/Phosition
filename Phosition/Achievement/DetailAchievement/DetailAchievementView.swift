@@ -31,6 +31,11 @@ class DetailAchievementView: UIView {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = .zero
         self.layer.shadowOpacity = 1
+        self.detailAchIV.layer.shadowRadius = 3
+        self.detailAchIV.layer.masksToBounds = false
+        self.detailAchIV.layer.shadowColor = UIColor.black.cgColor
+        self.detailAchIV.layer.shadowOpacity = 0.5
+        self.detailAchIV.layer.shadowOffset = CGSize(width: 4, height: 4)
     }
 
 }

@@ -22,9 +22,11 @@ class AchievementController: UIViewController, UITabBarControllerDelegate {
            
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Cream")!, .font: UIFont(name: "Raleway Thin Bold", size: 34)!]
             navBarAppearance.backgroundColor = UIColor(named: "Blue")
+            navBarAppearance.backgroundImage = UIImage(named: "backpattern")
             self.navigationController!.navigationBar.standardAppearance = navBarAppearance
             self.navigationController!.navigationBar.scrollEdgeAppearance = navBarAppearance
             achievementView.setup()
+            
             achievementView.achievementCV.delegate = self
             achievementView.achievementCV.dataSource = self
             self.tabBarController?.delegate = self
