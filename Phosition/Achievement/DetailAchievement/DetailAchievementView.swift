@@ -25,7 +25,12 @@ class DetailAchievementView: UIView {
         }
         
         achTitleLbl.text = ach.title
-        achDescLbl.text = ach.desc
+        if ach.isUnlocked{
+            achDescLbl.text = ach.desc
+        }else{
+            achDescLbl.text = ""
+        }
+        
         self.layer.cornerRadius = 20
         self.layer.shadowRadius = 5
         self.layer.shadowColor = UIColor.black.cgColor
