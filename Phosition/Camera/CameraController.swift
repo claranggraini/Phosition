@@ -14,11 +14,12 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
     var bufferSize: CGSize = .zero
     var rootLayer: CALayer! = nil
     var takePicture = false
-    var grid = false
+    var grid = true
+    var canShoot = false
     
     @IBOutlet weak private var gridView: UIView!
     @IBOutlet weak public var previewView: UIView!
-    @IBOutlet weak private var photoButton: UIButton!
+    @IBOutlet weak var photoButton: UIButton!
     let session = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
     let videoDataOutput = AVCaptureVideoDataOutput()
@@ -55,8 +56,13 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
 //    }
     
     @IBAction func onTapTakePhoto(_ sender: Any){
-        takePicture = true
-        photoButton.backgroundColor = .secondaryLabel
+        if canShoot == true {
+            takePicture = true
+        } else {
+            let alert = UIAlertController(title: "Cannot Take Photo", message: "You must put the object in the correct position first until the box turns green", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func onTapCancel(_ sender: Any){
@@ -214,7 +220,7 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         gridView.layer.addSublayer(shapeLayerc)
         gridView.layer.addSublayer(shapeLayerd)
         
-        gridView.isHidden = true
+        gridView.isHidden = false
     }
     
     @IBAction func onTapGridShow(_ sender: Any){
